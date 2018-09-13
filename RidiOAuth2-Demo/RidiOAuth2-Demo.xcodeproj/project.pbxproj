@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47D2D5AC8FBFA8E9E332809F /* Pods_RidiOAuth2_Demo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5FD40AC26786E1B273EBEA /* Pods_RidiOAuth2_Demo_iOS.framework */; };
 		8394D7C51F7CF3140078A45B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394D7C41F7CF3140078A45B /* AppDelegate.swift */; };
 		8394D7C71F7CF3140078A45B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394D7C61F7CF3140078A45B /* ViewController.swift */; };
 		8394D7CA1F7CF3140078A45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8394D7C81F7CF3140078A45B /* Main.storyboard */; };
@@ -20,40 +21,39 @@
 		8394D81F1F7DED2E0078A45B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394D81E1F7DED2E0078A45B /* ViewController.swift */; };
 		8394D8221F7DED2E0078A45B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8394D8201F7DED2E0078A45B /* Main.storyboard */; };
 		8394D8241F7DED2E0078A45B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8394D8231F7DED2E0078A45B /* Assets.xcassets */; };
-		91C0D242678CEB819D4C01D5 /* Pods_ridi_oauth2_demo_tvos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A888FDD3764106E6734DFC7 /* Pods_ridi_oauth2_demo_tvos.framework */; };
-		E26A393634D9981646572D4C /* Pods_ridi_oauth2_demo_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 957CEA65D6D626C6883425DE /* Pods_ridi_oauth2_demo_ios.framework */; };
-		E2AD334FAE4633A972DFFEE9 /* Pods_ridi_oauth2_demo_macos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709CB5ECB4816F905E6E87AC /* Pods_ridi_oauth2_demo_macos.framework */; };
+		A2DA13C20E37B1E089609129 /* Pods_RidiOAuth2_Demo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D598AACD147BA02F5FCC4A1C /* Pods_RidiOAuth2_Demo_tvOS.framework */; };
+		B9C15CE7C762A3E6158EE438 /* Pods_RidiOAuth2_Demo_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16976C3A8D5FE47729D20E9B /* Pods_RidiOAuth2_Demo_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DCCCE0270D015DD0663A503 /* Pods-ridi-oauth2-demo-tvos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridi-oauth2-demo-tvos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ridi-oauth2-demo-tvos/Pods-ridi-oauth2-demo-tvos.debug.xcconfig"; sourceTree = "<group>"; };
-		4476F11D6A3BB5B85E5BB0CC /* Pods-ridi-oauth2-demo-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridi-oauth2-demo-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ridi-oauth2-demo-ios/Pods-ridi-oauth2-demo-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		521AF436FC73D199A4B70CD7 /* Pods-ridi-oauth2-demo-macos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridi-oauth2-demo-macos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ridi-oauth2-demo-macos/Pods-ridi-oauth2-demo-macos.debug.xcconfig"; sourceTree = "<group>"; };
-		709CB5ECB4816F905E6E87AC /* Pods_ridi_oauth2_demo_macos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ridi_oauth2_demo_macos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8394D7C11F7CF3140078A45B /* ridi-oauth2-demo-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ridi-oauth2-demo-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		136F2339492F9E788D95A482 /* Pods-RidiOAuth2-Demo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-iOS/Pods-RidiOAuth2-Demo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		16976C3A8D5FE47729D20E9B /* Pods_RidiOAuth2_Demo_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidiOAuth2_Demo_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		380D6B2B447DDF7ADF659BAC /* Pods-RidiOAuth2-Demo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		545A66A70764D007071C339E /* Pods-RidiOAuth2-Demo-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-macOS/Pods-RidiOAuth2-Demo-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		6702FD0EBA862A8AFA787D6B /* Pods-RidiOAuth2-Demo-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-iOS/Pods-RidiOAuth2-Demo-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8394D7C11F7CF3140078A45B /* RidiOAuth2-Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RidiOAuth2-Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8394D7C41F7CF3140078A45B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8394D7C61F7CF3140078A45B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8394D7C91F7CF3140078A45B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8394D7CB1F7CF3140078A45B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8394D7CE1F7CF3140078A45B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8394D7D01F7CF3140078A45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8394D7DD1F7DD4030078A45B /* ridi-oauth2-demo-macos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ridi-oauth2-demo-macos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8394D7DD1F7DD4030078A45B /* RidiOAuth2-Demo-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RidiOAuth2-Demo-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8394D7DF1F7DD4030078A45B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8394D7E11F7DD4030078A45B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8394D7E31F7DD4030078A45B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8394D7E61F7DD4030078A45B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8394D7E81F7DD4030078A45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8394D81A1F7DED2E0078A45B /* ridi-oauth2-demo-tvos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ridi-oauth2-demo-tvos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8394D81A1F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RidiOAuth2-Demo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8394D81C1F7DED2E0078A45B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8394D81E1F7DED2E0078A45B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8394D8211F7DED2E0078A45B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8394D8231F7DED2E0078A45B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8394D8251F7DED2E0078A45B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A888FDD3764106E6734DFC7 /* Pods_ridi_oauth2_demo_tvos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ridi_oauth2_demo_tvos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E098F5CA3DFA5F03B1A0471 /* Pods-ridi-oauth2-demo-tvos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridi-oauth2-demo-tvos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ridi-oauth2-demo-tvos/Pods-ridi-oauth2-demo-tvos.release.xcconfig"; sourceTree = "<group>"; };
-		957CEA65D6D626C6883425DE /* Pods_ridi_oauth2_demo_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ridi_oauth2_demo_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B220B4C357B786AFF5E9E243 /* Pods-ridi-oauth2-demo-macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridi-oauth2-demo-macos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ridi-oauth2-demo-macos/Pods-ridi-oauth2-demo-macos.release.xcconfig"; sourceTree = "<group>"; };
-		B90F5193380B70AC5F4F1B69 /* Pods-ridi-oauth2-demo-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ridi-oauth2-demo-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-ridi-oauth2-demo-ios/Pods-ridi-oauth2-demo-ios.release.xcconfig"; sourceTree = "<group>"; };
+		92B696D5D0A308934F5DA275 /* Pods-RidiOAuth2-Demo-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-macOS/Pods-RidiOAuth2-Demo-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BB4E368E91CB60059C5D6A18 /* Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CC5FD40AC26786E1B273EBEA /* Pods_RidiOAuth2_Demo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidiOAuth2_Demo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D598AACD147BA02F5FCC4A1C /* Pods_RidiOAuth2_Demo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidiOAuth2_Demo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E26A393634D9981646572D4C /* Pods_ridi_oauth2_demo_ios.framework in Frameworks */,
+				47D2D5AC8FBFA8E9E332809F /* Pods_RidiOAuth2_Demo_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AD334FAE4633A972DFFEE9 /* Pods_ridi_oauth2_demo_macos.framework in Frameworks */,
+				B9C15CE7C762A3E6158EE438 /* Pods_RidiOAuth2_Demo_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C0D242678CEB819D4C01D5 /* Pods_ridi_oauth2_demo_tvos.framework in Frameworks */,
+				A2DA13C20E37B1E089609129 /* Pods_RidiOAuth2_Demo_tvOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +87,9 @@
 		4E128B76F094689F9CFC4AAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				957CEA65D6D626C6883425DE /* Pods_ridi_oauth2_demo_ios.framework */,
-				709CB5ECB4816F905E6E87AC /* Pods_ridi_oauth2_demo_macos.framework */,
-				8A888FDD3764106E6734DFC7 /* Pods_ridi_oauth2_demo_tvos.framework */,
+				CC5FD40AC26786E1B273EBEA /* Pods_RidiOAuth2_Demo_iOS.framework */,
+				16976C3A8D5FE47729D20E9B /* Pods_RidiOAuth2_Demo_macOS.framework */,
+				D598AACD147BA02F5FCC4A1C /* Pods_RidiOAuth2_Demo_tvOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,26 +97,26 @@
 		8394D7B81F7CF3140078A45B = {
 			isa = PBXGroup;
 			children = (
-				8394D7C31F7CF3140078A45B /* ridi-oauth2-demo-ios */,
-				8394D7DE1F7DD4030078A45B /* ridi-oauth2-demo-macos */,
-				8394D81B1F7DED2E0078A45B /* ridi-oauth2-demo-tvos */,
+				8394D7C31F7CF3140078A45B /* RidiOAuth2-Demo-iOS */,
+				8394D7DE1F7DD4030078A45B /* RidiOAuth2-Demo-macOS */,
+				8394D81B1F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS */,
 				8394D7C21F7CF3140078A45B /* Products */,
-				DBC6BC38BED26F5D0FC51548 /* Pods */,
 				4E128B76F094689F9CFC4AAD /* Frameworks */,
+				D64EB70DA05018A34F79A5BA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		8394D7C21F7CF3140078A45B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8394D7C11F7CF3140078A45B /* ridi-oauth2-demo-ios.app */,
-				8394D7DD1F7DD4030078A45B /* ridi-oauth2-demo-macos.app */,
-				8394D81A1F7DED2E0078A45B /* ridi-oauth2-demo-tvos.app */,
+				8394D7C11F7CF3140078A45B /* RidiOAuth2-Demo-iOS.app */,
+				8394D7DD1F7DD4030078A45B /* RidiOAuth2-Demo-macOS.app */,
+				8394D81A1F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8394D7C31F7CF3140078A45B /* ridi-oauth2-demo-ios */ = {
+		8394D7C31F7CF3140078A45B /* RidiOAuth2-Demo-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				8394D7C41F7CF3140078A45B /* AppDelegate.swift */,
@@ -126,10 +126,10 @@
 				8394D7CD1F7CF3140078A45B /* LaunchScreen.storyboard */,
 				8394D7D01F7CF3140078A45B /* Info.plist */,
 			);
-			path = "ridi-oauth2-demo-ios";
+			path = "RidiOAuth2-Demo-iOS";
 			sourceTree = "<group>";
 		};
-		8394D7DE1F7DD4030078A45B /* ridi-oauth2-demo-macos */ = {
+		8394D7DE1F7DD4030078A45B /* RidiOAuth2-Demo-macOS */ = {
 			isa = PBXGroup;
 			children = (
 				8394D7DF1F7DD4030078A45B /* AppDelegate.swift */,
@@ -138,10 +138,10 @@
 				8394D7E51F7DD4030078A45B /* Main.storyboard */,
 				8394D7E81F7DD4030078A45B /* Info.plist */,
 			);
-			path = "ridi-oauth2-demo-macos";
+			path = "RidiOAuth2-Demo-macOS";
 			sourceTree = "<group>";
 		};
-		8394D81B1F7DED2E0078A45B /* ridi-oauth2-demo-tvos */ = {
+		8394D81B1F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				8394D81C1F7DED2E0078A45B /* AppDelegate.swift */,
@@ -150,18 +150,18 @@
 				8394D8231F7DED2E0078A45B /* Assets.xcassets */,
 				8394D8251F7DED2E0078A45B /* Info.plist */,
 			);
-			path = "ridi-oauth2-demo-tvos";
+			path = "RidiOAuth2-Demo-tvOS";
 			sourceTree = "<group>";
 		};
-		DBC6BC38BED26F5D0FC51548 /* Pods */ = {
+		D64EB70DA05018A34F79A5BA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4476F11D6A3BB5B85E5BB0CC /* Pods-ridi-oauth2-demo-ios.debug.xcconfig */,
-				B90F5193380B70AC5F4F1B69 /* Pods-ridi-oauth2-demo-ios.release.xcconfig */,
-				521AF436FC73D199A4B70CD7 /* Pods-ridi-oauth2-demo-macos.debug.xcconfig */,
-				B220B4C357B786AFF5E9E243 /* Pods-ridi-oauth2-demo-macos.release.xcconfig */,
-				1DCCCE0270D015DD0663A503 /* Pods-ridi-oauth2-demo-tvos.debug.xcconfig */,
-				8E098F5CA3DFA5F03B1A0471 /* Pods-ridi-oauth2-demo-tvos.release.xcconfig */,
+				136F2339492F9E788D95A482 /* Pods-RidiOAuth2-Demo-iOS.debug.xcconfig */,
+				6702FD0EBA862A8AFA787D6B /* Pods-RidiOAuth2-Demo-iOS.release.xcconfig */,
+				92B696D5D0A308934F5DA275 /* Pods-RidiOAuth2-Demo-macOS.debug.xcconfig */,
+				545A66A70764D007071C339E /* Pods-RidiOAuth2-Demo-macOS.release.xcconfig */,
+				BB4E368E91CB60059C5D6A18 /* Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig */,
+				380D6B2B447DDF7ADF659BAC /* Pods-RidiOAuth2-Demo-tvOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -169,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8394D7C01F7CF3140078A45B /* ridi-oauth2-demo-ios */ = {
+		8394D7C01F7CF3140078A45B /* RidiOAuth2-Demo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8394D7D31F7CF3140078A45B /* Build configuration list for PBXNativeTarget "ridi-oauth2-demo-ios" */;
+			buildConfigurationList = 8394D7D31F7CF3140078A45B /* Build configuration list for PBXNativeTarget "RidiOAuth2-Demo-iOS" */;
 			buildPhases = (
 				E06EFC777E48B45D86456579 /* [CP] Check Pods Manifest.lock */,
 				8394D7D81F7D00440078A45B /* SwiftLint Script */,
@@ -185,14 +185,14 @@
 			);
 			dependencies = (
 			);
-			name = "ridi-oauth2-demo-ios";
-			productName = "ridi-oauth2-demo-ios";
-			productReference = 8394D7C11F7CF3140078A45B /* ridi-oauth2-demo-ios.app */;
+			name = "RidiOAuth2-Demo-iOS";
+			productName = "RidiOAuth2-Demo-iOS";
+			productReference = 8394D7C11F7CF3140078A45B /* RidiOAuth2-Demo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8394D7DC1F7DD4030078A45B /* ridi-oauth2-demo-macos */ = {
+		8394D7DC1F7DD4030078A45B /* RidiOAuth2-Demo-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8394D7EB1F7DD4030078A45B /* Build configuration list for PBXNativeTarget "ridi-oauth2-demo-macos" */;
+			buildConfigurationList = 8394D7EB1F7DD4030078A45B /* Build configuration list for PBXNativeTarget "RidiOAuth2-Demo-macOS" */;
 			buildPhases = (
 				20F5846D8B80B126A8B53995 /* [CP] Check Pods Manifest.lock */,
 				8394D7D91F7DD4030078A45B /* Sources */,
@@ -205,14 +205,14 @@
 			);
 			dependencies = (
 			);
-			name = "ridi-oauth2-demo-macos";
-			productName = "ridi-oauth2-demo-macos";
-			productReference = 8394D7DD1F7DD4030078A45B /* ridi-oauth2-demo-macos.app */;
+			name = "RidiOAuth2-Demo-macOS";
+			productName = "RidiOAuth2-Demo-macOS";
+			productReference = 8394D7DD1F7DD4030078A45B /* RidiOAuth2-Demo-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8394D8191F7DED2E0078A45B /* ridi-oauth2-demo-tvos */ = {
+		8394D8191F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8394D8281F7DED2E0078A45B /* Build configuration list for PBXNativeTarget "ridi-oauth2-demo-tvos" */;
+			buildConfigurationList = 8394D8281F7DED2E0078A45B /* Build configuration list for PBXNativeTarget "RidiOAuth2-Demo-tvOS" */;
 			buildPhases = (
 				48D26CB6B85358A078FAE1B7 /* [CP] Check Pods Manifest.lock */,
 				8394D8161F7DED2E0078A45B /* Sources */,
@@ -225,9 +225,9 @@
 			);
 			dependencies = (
 			);
-			name = "ridi-oauth2-demo-tvos";
-			productName = "ridi-oauth2-demo-tvos";
-			productReference = 8394D81A1F7DED2E0078A45B /* ridi-oauth2-demo-tvos.app */;
+			name = "RidiOAuth2-Demo-tvOS";
+			productName = "RidiOAuth2-Demo-tvOS";
+			productReference = 8394D81A1F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +254,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8394D7BC1F7CF3140078A45B /* Build configuration list for PBXProject "ridi-oauth2-demo" */;
+			buildConfigurationList = 8394D7BC1F7CF3140078A45B /* Build configuration list for PBXProject "RidiOAuth2-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -267,9 +267,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8394D7C01F7CF3140078A45B /* ridi-oauth2-demo-ios */,
-				8394D7DC1F7DD4030078A45B /* ridi-oauth2-demo-macos */,
-				8394D8191F7DED2E0078A45B /* ridi-oauth2-demo-tvos */,
+				8394D7C01F7CF3140078A45B /* RidiOAuth2-Demo-iOS */,
+				8394D7DC1F7DD4030078A45B /* RidiOAuth2-Demo-macOS */,
+				8394D8191F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -312,16 +312,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-ios/Pods-ridi-oauth2-demo-ios-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ridi-oauth2-iOS/ridi_oauth2.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-iOS/Pods-RidiOAuth2-Demo-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RidiOAuth2-iOS/RidiOAuth2.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ridi_oauth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidiOAuth2.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-ios/Pods-ridi-oauth2-demo-ios-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-iOS/Pods-RidiOAuth2-Demo-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		20F5846D8B80B126A8B53995 /* [CP] Check Pods Manifest.lock */ = {
@@ -335,7 +335,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ridi-oauth2-demo-macos-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RidiOAuth2-Demo-macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -348,16 +348,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-tvos/Pods-ridi-oauth2-demo-tvos-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ridi-oauth2-tvOS/ridi_oauth2.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RidiOAuth2-tvOS/RidiOAuth2.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ridi_oauth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidiOAuth2.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-tvos/Pods-ridi-oauth2-demo-tvos-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		48D26CB6B85358A078FAE1B7 /* [CP] Check Pods Manifest.lock */ = {
@@ -371,7 +371,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ridi-oauth2-demo-tvos-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RidiOAuth2-Demo-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,7 +390,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-tvos/Pods-ridi-oauth2-demo-tvos-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		688429081BB977248C037C5D /* [CP] Copy Pods Resources */ = {
@@ -405,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-ios/Pods-ridi-oauth2-demo-ios-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-iOS/Pods-RidiOAuth2-Demo-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8394D7D81F7D00440078A45B /* SwiftLint Script */ = {
@@ -428,16 +428,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-macos/Pods-ridi-oauth2-demo-macos-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ridi-oauth2-macOS/ridi_oauth2.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-macOS/Pods-RidiOAuth2-Demo-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RidiOAuth2-macOS/RidiOAuth2.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ridi_oauth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidiOAuth2.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-macos/Pods-ridi-oauth2-demo-macos-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-macOS/Pods-RidiOAuth2-Demo-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CD3BF3C0AEDAC338D9D97E28 /* [CP] Copy Pods Resources */ = {
@@ -452,7 +452,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ridi-oauth2-demo-macos/Pods-ridi-oauth2-demo-macos-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RidiOAuth2-Demo-macOS/Pods-RidiOAuth2-Demo-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E06EFC777E48B45D86456579 /* [CP] Check Pods Manifest.lock */ = {
@@ -466,7 +466,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ridi-oauth2-demo-ios-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RidiOAuth2-Demo-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -638,15 +638,15 @@
 		};
 		8394D7D41F7CF3140078A45B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4476F11D6A3BB5B85E5BB0CC /* Pods-ridi-oauth2-demo-ios.debug.xcconfig */;
+			baseConfigurationReference = 136F2339492F9E788D95A482 /* Pods-RidiOAuth2-Demo-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "ridi-oauth2-demo-ios/Info.plist";
+				INFOPLIST_FILE = "RidiOAuth2-Demo-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.ridi-oauth2-demo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.RidiOAuth2-Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -655,15 +655,15 @@
 		};
 		8394D7D51F7CF3140078A45B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B90F5193380B70AC5F4F1B69 /* Pods-ridi-oauth2-demo-ios.release.xcconfig */;
+			baseConfigurationReference = 6702FD0EBA862A8AFA787D6B /* Pods-RidiOAuth2-Demo-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "ridi-oauth2-demo-ios/Info.plist";
+				INFOPLIST_FILE = "RidiOAuth2-Demo-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.ridi-oauth2-demo-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.RidiOAuth2-Demo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -672,15 +672,15 @@
 		};
 		8394D7E91F7DD4030078A45B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 521AF436FC73D199A4B70CD7 /* Pods-ridi-oauth2-demo-macos.debug.xcconfig */;
+			baseConfigurationReference = 92B696D5D0A308934F5DA275 /* Pods-RidiOAuth2-Demo-macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "ridi-oauth2-demo-macos/Info.plist";
+				INFOPLIST_FILE = "RidiOAuth2-Demo-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.ridi-oauth2-demo-macos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.RidiOAuth2-Demo-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -689,15 +689,15 @@
 		};
 		8394D7EA1F7DD4030078A45B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B220B4C357B786AFF5E9E243 /* Pods-ridi-oauth2-demo-macos.release.xcconfig */;
+			baseConfigurationReference = 545A66A70764D007071C339E /* Pods-RidiOAuth2-Demo-macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "ridi-oauth2-demo-macos/Info.plist";
+				INFOPLIST_FILE = "RidiOAuth2-Demo-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.ridi-oauth2-demo-macos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.RidiOAuth2-Demo-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -706,13 +706,13 @@
 		};
 		8394D8261F7DED2E0078A45B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DCCCE0270D015DD0663A503 /* Pods-ridi-oauth2-demo-tvos.debug.xcconfig */;
+			baseConfigurationReference = BB4E368E91CB60059C5D6A18 /* Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "ridi-oauth2-demo-tvos/Info.plist";
+				INFOPLIST_FILE = "RidiOAuth2-Demo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.ridi-oauth2-demo-tvos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.RidiOAuth2-Demo-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -723,13 +723,13 @@
 		};
 		8394D8271F7DED2E0078A45B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E098F5CA3DFA5F03B1A0471 /* Pods-ridi-oauth2-demo-tvos.release.xcconfig */;
+			baseConfigurationReference = 380D6B2B447DDF7ADF659BAC /* Pods-RidiOAuth2-Demo-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "ridi-oauth2-demo-tvos/Info.plist";
+				INFOPLIST_FILE = "RidiOAuth2-Demo-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.ridi-oauth2-demo-tvos";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davin.RidiOAuth2-Demo-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 3.0;
@@ -741,7 +741,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8394D7BC1F7CF3140078A45B /* Build configuration list for PBXProject "ridi-oauth2-demo" */ = {
+		8394D7BC1F7CF3140078A45B /* Build configuration list for PBXProject "RidiOAuth2-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8394D7D11F7CF3140078A45B /* Debug */,
@@ -750,7 +750,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8394D7D31F7CF3140078A45B /* Build configuration list for PBXNativeTarget "ridi-oauth2-demo-ios" */ = {
+		8394D7D31F7CF3140078A45B /* Build configuration list for PBXNativeTarget "RidiOAuth2-Demo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8394D7D41F7CF3140078A45B /* Debug */,
@@ -759,7 +759,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8394D7EB1F7DD4030078A45B /* Build configuration list for PBXNativeTarget "ridi-oauth2-demo-macos" */ = {
+		8394D7EB1F7DD4030078A45B /* Build configuration list for PBXNativeTarget "RidiOAuth2-Demo-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8394D7E91F7DD4030078A45B /* Debug */,
@@ -768,7 +768,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8394D8281F7DED2E0078A45B /* Build configuration list for PBXNativeTarget "ridi-oauth2-demo-tvos" */ = {
+		8394D8281F7DED2E0078A45B /* Build configuration list for PBXNativeTarget "RidiOAuth2-Demo-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8394D8261F7DED2E0078A45B /* Debug */,

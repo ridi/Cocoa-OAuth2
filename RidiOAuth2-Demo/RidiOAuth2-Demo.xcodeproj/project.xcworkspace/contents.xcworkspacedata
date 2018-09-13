@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ridi-oauth2-demo.xcodeproj">
+      location = "self:RidiOAuth2-Demo.xcodeproj">
    </FileRef>
 </Workspace>
