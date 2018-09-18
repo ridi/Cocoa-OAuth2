@@ -2,6 +2,7 @@ use_frameworks!
 
 def pods
     pod 'RidiOAuth2', :path => '../'
+    pod 'JWTDecode'
 end
 
 target 'RidiOAuth2-Demo-iOS' do
