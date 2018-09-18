@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '2.0'
   s.tvos.deployment_target = '9.0'
   s.source       = { :git => 'https://github.com/ridi/cocoa-oauth2.git', :tag => s.version }
-  s.source_files = 'RidiOAuth2/RidiOAuth2.swift'
+  s.source_files = 'RidiOAuth2/*.swift'
   s.frameworks   = 'Foundation'
 end
