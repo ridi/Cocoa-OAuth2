@@ -9,11 +9,10 @@
 ## Requirements
 
 - Xcode 9.0+
-- Swift 3
+- Swift 3.2+
 - iOS9+
-- watchOS 2.0+
 - macOS 10.10+
-- tvOS 9.0+
+- tvOS 9.2+
 
 ## Installation
 
