@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/ridi/cocoa-oauth2.git', :tag => s.version }
   s.source_files = 'RidiOAuth2/*.swift'
   s.frameworks   = 'Foundation'
+  s.dependency 'Alamofire', '~> 4.0'
 end
