@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A84132A2150C8C80065D73C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8413292150C8C80065D73C /* Global.swift */; };
+		2A84132B2150C8C80065D73C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8413292150C8C80065D73C /* Global.swift */; };
+		2A84132C2150C8C80065D73C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8413292150C8C80065D73C /* Global.swift */; };
 		4D6E3E8B3BDD2D2A1C489CC0 /* Pods_RidiOAuth2_Demo_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F750C65E9FDE4E80C9B091 /* Pods_RidiOAuth2_Demo_iOS.framework */; };
 		5BCFC3288F7370E4BBC57973 /* Pods_RidiOAuth2_Demo_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410C8F4A3BF96B5598073D8 /* Pods_RidiOAuth2_Demo_tvOS.framework */; };
 		8394D7C51F7CF3140078A45B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8394D7C41F7CF3140078A45B /* AppDelegate.swift */; };
@@ -28,6 +31,7 @@
 /* Begin PBXFileReference section */
 		08F750C65E9FDE4E80C9B091 /* Pods_RidiOAuth2_Demo_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidiOAuth2_Demo_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		237A53D7EEA6ECE625085471 /* Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2A8413292150C8C80065D73C /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		3410C8F4A3BF96B5598073D8 /* Pods_RidiOAuth2_Demo_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RidiOAuth2_Demo_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EAE116C90E2E6E1B887FE4 /* Pods-RidiOAuth2-Demo-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-iOS/Pods-RidiOAuth2-Demo-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7498D67E51F619CD26542CDD /* Pods-RidiOAuth2-Demo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RidiOAuth2-Demo-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RidiOAuth2-Demo-tvOS/Pods-RidiOAuth2-Demo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 		8394D7B81F7CF3140078A45B = {
 			isa = PBXGroup;
 			children = (
+				2A8413292150C8C80065D73C /* Global.swift */,
 				8394D7C31F7CF3140078A45B /* RidiOAuth2-Demo-iOS */,
 				8394D7DE1F7DD4030078A45B /* RidiOAuth2-Demo-macOS */,
 				8394D81B1F7DED2E0078A45B /* RidiOAuth2-Demo-tvOS */,
@@ -468,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A84132A2150C8C80065D73C /* Global.swift in Sources */,
 				8394D7C71F7CF3140078A45B /* ViewController.swift in Sources */,
 				8394D7C51F7CF3140078A45B /* AppDelegate.swift in Sources */,
 			);
@@ -479,6 +485,7 @@
 			files = (
 				8394D7E21F7DD4030078A45B /* ViewController.swift in Sources */,
 				8394D7E01F7DD4030078A45B /* AppDelegate.swift in Sources */,
+				2A84132B2150C8C80065D73C /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +495,7 @@
 			files = (
 				8394D81F1F7DED2E0078A45B /* ViewController.swift in Sources */,
 				8394D81D1F7DED2E0078A45B /* AppDelegate.swift in Sources */,
+				2A84132C2150C8C80065D73C /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
