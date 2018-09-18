@@ -12,7 +12,6 @@
 - Swift 3.2+
 - iOS9+
 - macOS 10.10+
-- tvOS 9.2+
 
 ## Installation
 

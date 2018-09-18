@@ -14,8 +14,3 @@ target 'RidiOAuth2-Demo-macOS' do
     platform :osx, '10.10'
     pods
 end
-
-target 'RidiOAuth2-Demo-tvOS' do
-    platform :tvos, '9.2'
-    pods
-end
