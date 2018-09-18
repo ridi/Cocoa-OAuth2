@@ -1,9 +1,6 @@
 import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
-    private let devHost = "dev.ridi.io"
-    private let realHost = "ridibooks.com"
-    
     var isDevMode = false
     
     @IBOutlet weak var webView: UIWebView!
@@ -13,7 +10,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         super.viewWillAppear(animated)
         
         if !webView.isLoading {
-            let url = URL(string: "https://\(isDevMode ? devHost : realHost)/account/login")!
+            let url = URL(string: "https://\(isDevMode ? Global.devHost : Global.realHost)/account/login")!
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
@@ -38,7 +35,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         shouldStartLoadWith request: URLRequest,
         navigationType: UIWebViewNavigationType
     ) -> Bool {
-        if request.url?.absoluteString == "https://\(isDevMode ? devHost : realHost)/" {
+        if request.url?.absoluteString == "https://\(isDevMode ? Global.devHost : Global.realHost)/" {
             dismiss(animated: true, completion: nil)
             return false
         }
