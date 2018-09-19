@@ -5,8 +5,8 @@ public let AuthorizationErrorDomain = "Authorization.Error.Domain"
 public let AuthorizationErrorKey = "AuthorizationErrorKey"
 
 private extension Array where Element: HTTPCookie {
-    func first(where predicate: (domain: String, name: String)) -> Element? {
-        return first { $0.domain.hasSuffix(predicate.domain) && $0.name == predicate.name }
+    func first(where matches: (domain: String, name: String)) -> Element? {
+        return first { $0.domain.hasSuffix(matches.domain) && $0.name == matches.name }
     }
 }
 
