@@ -4,9 +4,13 @@ import RxSwift
 public let AuthorizationErrorDomain = "Authorization.Error.Domain"
 public let AuthorizationErrorKey = "AuthorizationErrorKey"
 
+private extension Array where Element: HTTPCookie {
+    func first(where predicate: (domain: String, name: String)) -> Element? {
+        return first { $0.domain.hasSuffix(predicate.domain) && $0.name == predicate.name }
+    }
+}
+
 public final class Authorization {
-    private let redirectUri = "app://authorized"
-    
     private struct Host {
         static let dev = "dev.ridi.io"
         static let real = "ridibooks.com"
@@ -18,11 +22,17 @@ public final class Authorization {
     }
     
     private let clientId: String
+    private let host: String
     private let api: Api
+    
+    private let redirectUri = "app://authorized"
+    
+    private let cookieStorage = HTTPCookieStorage.shared
     
     public init(clientId: String, devMode: Bool = false) {
         self.clientId = clientId
-        self.api = Api(baseUrl: "https://account.\(devMode ? Host.dev : Host.real)/")
+        self.host = devMode ? Host.dev : Host.real
+        self.api = Api(baseUrl: "https://account.\(host)/")
     }
     
     private func makeError(_ statusCode: Int = 0, _ error: Error? = nil) -> Error {
@@ -37,9 +47,9 @@ public final class Authorization {
     ) {
         let error = makeError(response.response?.statusCode ?? 0, response.error)
         if filter() {
-            let cookieStorage = HTTPCookieStorage.shared
-            guard let at = cookieStorage.cookies?.first(where: { $0.name == CookieName.accessToken })?.value,
-                let rt = cookieStorage.cookies?.first(where: { $0.name == CookieName.refreshToken })?.value else {
+            let cookies = cookieStorage.cookies ?? []
+            guard let at = cookies.first(where: (host, CookieName.accessToken))?.value,
+                let rt = cookies.first(where: (host, CookieName.refreshToken))?.value else {
                     emitter(.error(error))
                     return
             }
