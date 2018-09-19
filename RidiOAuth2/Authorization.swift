@@ -40,6 +40,17 @@ public final class Authorization {
         return NSError(domain: AuthorizationErrorDomain, code: statusCode, userInfo: userInfo)
     }
     
+    private func makeCookie(_ name: String, value: String, secure: Bool = true) -> HTTPCookie {
+        var properties = [HTTPCookiePropertyKey: Any]()
+        properties[.name] = name
+        properties[.value] = value
+        properties[.domain] = ".\(host)"
+        properties[.originURL] = ".\(host)"
+        properties[.path] = "/"
+        properties[.secure] = secure
+        return HTTPCookie(properties: properties)!
+    }
+    
     private func dispatch(
         response: DefaultDataResponse,
         to emitter: ((SingleEvent<TokenPair>) -> Void),
@@ -87,6 +98,8 @@ public final class Authorization {
     }
     
     public func refreshAccessToken(refreshToken: String) -> Single<TokenPair> {
+        cookieStorage.cookieAcceptPolicy = .always
+        cookieStorage.setCookie(makeCookie(CookieName.refreshToken, value: refreshToken))
         return Single<TokenPair>.create { emitter -> Disposable in
             self.api.refreshAccessToken { response in
                 self.dispatch(response: response, to: emitter, with: { () -> Bool in
