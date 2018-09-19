@@ -5,20 +5,24 @@ public let AuthorizationErrorDomain = "Authorization.Error.Domain"
 public let AuthorizationErrorKey = "AuthorizationErrorKey"
 
 public final class Authorization {
-    private let devHost = "account.dev.ridi.io"
-    private let realHost = "account.ridibooks.com"
-    
     private let redirectUri = "app://authorized"
     
-    private let atCookieName = "ridi-at"
-    private let rtCookieName = "ridi-rt"
+    private struct Host {
+        static let dev = "dev.ridi.io"
+        static let real = "ridibooks.com"
+    }
+    
+    private struct CookieName {
+        static let accessToken = "ridi-at"
+        static let refreshToken = "ridi-rt"
+    }
     
     private let clientId: String
     private let api: Api
     
     public init(clientId: String, devMode: Bool = false) {
         self.clientId = clientId
-        self.api = Api(baseUrl: "https://\(devMode ? devHost : realHost)/")
+        self.api = Api(baseUrl: "https://account.\(devMode ? Host.dev : Host.real)/")
     }
     
     private func makeError(_ statusCode: Int = 0, _ error: Error? = nil) -> Error {
@@ -34,8 +38,8 @@ public final class Authorization {
         let error = makeError(response.response?.statusCode ?? 0, response.error)
         if filter() {
             let cookieStorage = HTTPCookieStorage.shared
-            guard let at = cookieStorage.cookies?.first(where: { $0.name == atCookieName })?.value,
-                let rt = cookieStorage.cookies?.first(where: { $0.name == rtCookieName })?.value else {
+            guard let at = cookieStorage.cookies?.first(where: { $0.name == CookieName.accessToken })?.value,
+                let rt = cookieStorage.cookies?.first(where: { $0.name == CookieName.refreshToken })?.value else {
                     emitter(.error(error))
                     return
             }

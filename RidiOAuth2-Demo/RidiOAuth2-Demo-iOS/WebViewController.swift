@@ -10,7 +10,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         super.viewWillAppear(animated)
         
         if !webView.isLoading {
-            let url = URL(string: "https://\(isDevMode ? Global.devHost : Global.realHost)/account/login")!
+            let url = URL(string: "https://\(isDevMode ? Global.Host.dev : Global.Host.real)/account/login")!
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }

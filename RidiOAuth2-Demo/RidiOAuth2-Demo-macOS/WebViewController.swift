@@ -11,7 +11,7 @@ class WebViewController: NSViewController, WebFrameLoadDelegate {
         super.viewWillAppear()
         
         if !webView.isLoading {
-            let url = URL(string: "https://\(isDevMode ? Global.devHost : Global.realHost)/account/login")!
+            let url = URL(string: "https://\(isDevMode ? Global.Host.dev : Global.Host.real)/account/login")!
             let request = URLRequest(url: url)
             webView.mainFrame.load(request)
         }

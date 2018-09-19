@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         didSet {
             Global.removeAllCookies()
             refreshToken = nil
-            let clientId = isDevMode ? Global.devClientId : Global.realClientId
+            let clientId = isDevMode ? Global.ClientID.dev : Global.ClientID.real
             authorization = Authorization(clientId: clientId, devMode: isDevMode)
         }
     }
