@@ -29,18 +29,18 @@ public final class Authorization {
     
     private let cookieStorage = HTTPCookieStorage.shared
     
-    public init(clientId: String, devMode: Bool = false) {
+    public init(clientId: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
         self.clientId = clientId
         self.host = devMode ? Host.dev : Host.real
-        self.api = Api(baseUrl: "https://account.\(host)/")
+        self.api = Api(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
     }
     
-    private func makeError(_ statusCode: Int = 0, _ error: Error? = nil) -> Error {
+    func makeError(_ statusCode: Int = 0, _ error: Error? = nil) -> Error {
         let userInfo: [String: Any] = [AuthorizationErrorKey: error ?? "nil"]
         return NSError(domain: AuthorizationErrorDomain, code: statusCode, userInfo: userInfo)
     }
     
-    private func makeCookie(_ name: String, value: String, secure: Bool = true) -> HTTPCookie {
+    func makeCookie(_ name: String, value: String, secure: Bool = true) -> HTTPCookie {
         var properties = [HTTPCookiePropertyKey: Any]()
         properties[.name] = name
         properties[.value] = value

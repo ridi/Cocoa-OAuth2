@@ -11,7 +11,7 @@ final class Api {
     private let sessionManager: SessionManager
     private let baseUrl: String
     
-    init(baseUrl: String) {
+    init(baseUrl: String, protocolClasses: [AnyClass]? = nil) {
         var headers = SessionManager.defaultHTTPHeaders
         headers["Accept"] = "application/json"
         
@@ -19,6 +19,7 @@ final class Api {
         configuration.timeoutIntervalForRequest = timeout
         configuration.httpAdditionalHeaders = headers
         configuration.httpShouldSetCookies = true
+        configuration.protocolClasses = protocolClasses
         
         self.sessionManager = SessionManager(configuration: configuration)
         self.baseUrl = baseUrl
