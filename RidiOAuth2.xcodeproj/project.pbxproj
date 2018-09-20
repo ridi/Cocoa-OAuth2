@@ -27,6 +27,14 @@
 		2A0D2BA22153963400E5C6AD /* URL+HippolyteAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D2B8F2153963400E5C6AD /* URL+HippolyteAdditions.swift */; };
 		2A0D2BA32153963400E5C6AD /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D2B902153963400E5C6AD /* HTTPRequest.swift */; };
 		2A0D2BA42153963400E5C6AD /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D2B902153963400E5C6AD /* HTTPRequest.swift */; };
+		2A0D702E2153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
+		2A0D702F2153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
+		2A0D70302153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
+		2A0D70312153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
+		2A0D70332153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
+		2A0D70342153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
+		2A0D70352153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
+		2A0D70362153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
 		2A1F38CC2152563A00E94738 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F3863215255B200E94738 /* Alamofire.framework */; };
 		2A1F38CD2152563A00E94738 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F3889215255C200E94738 /* RxSwift.framework */; };
 		2A1F38CE2152564500E94738 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F3867215255B200E94738 /* Alamofire.framework */; };
@@ -275,6 +283,8 @@
 		2A0D2B8E2153963300E5C6AD /* URLSessionHook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessionHook.swift; path = Frameworks/Hippolyte/Hippolyte/URLSessionHook.swift; sourceTree = "<group>"; };
 		2A0D2B8F2153963400E5C6AD /* URL+HippolyteAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+HippolyteAdditions.swift"; path = "Frameworks/Hippolyte/Hippolyte/URL+HippolyteAdditions.swift"; sourceTree = "<group>"; };
 		2A0D2B902153963400E5C6AD /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = Frameworks/Hippolyte/Hippolyte/HTTPRequest.swift; sourceTree = "<group>"; };
+		2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
+		2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCookieExtension.swift; sourceTree = "<group>"; };
 		2A1F384B2152553600E94738 /* RidiOAuth2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RidiOAuth2.h; sourceTree = "<group>"; };
 		2A1F384C2152553600E94738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A1F38532152559600E94738 /* TokenPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenPair.swift; sourceTree = "<group>"; };
@@ -373,6 +383,8 @@
 				2A1F384C2152553600E94738 /* Info.plist */,
 				2A1F38552152559600E94738 /* Api.swift */,
 				2A1F38542152559600E94738 /* Authorization.swift */,
+				2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */,
+				2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */,
 				2A1F38532152559600E94738 /* TokenPair.swift */,
 			);
 			path = RidiOAuth2;
@@ -824,6 +836,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1F391F2152588100E94738 /* Api.swift in Sources */,
+				2A0D702E2153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
+				2A0D70332153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
 				2A1F39212152588100E94738 /* TokenPair.swift in Sources */,
 				2A1F39202152588100E94738 /* Authorization.swift in Sources */,
 			);
@@ -834,6 +848,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1F391C2152588000E94738 /* Api.swift in Sources */,
+				2A0D70302153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
+				2A0D70352153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
 				2A1F391E2152588000E94738 /* TokenPair.swift in Sources */,
 				2A1F391D2152588000E94738 /* Authorization.swift in Sources */,
 			);
@@ -845,6 +861,7 @@
 			files = (
 				2A0D2B9F2153963400E5C6AD /* URLSessionHook.swift in Sources */,
 				2A0D2BA12153963400E5C6AD /* URL+HippolyteAdditions.swift in Sources */,
+				2A0D702F2153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
 				2A1F39232152588300E94738 /* Authorization.swift in Sources */,
 				2A0D2B9D2153963400E5C6AD /* Matcher.swift in Sources */,
 				2A0D2B912153963400E5C6AD /* URLHook.swift in Sources */,
@@ -853,6 +870,7 @@
 				2A0D2B952153963400E5C6AD /* StubRequest.swift in Sources */,
 				2A1F39222152588300E94738 /* Api.swift in Sources */,
 				2A0D2B9B2153963400E5C6AD /* Hippolyte.swift in Sources */,
+				2A0D70342153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
 				2A1F38F9215257ED00E94738 /* RidiOAuth2Tests.swift in Sources */,
 				2A0D2BA32153963400E5C6AD /* HTTPRequest.swift in Sources */,
 				2A1F39242152588300E94738 /* TokenPair.swift in Sources */,
@@ -866,6 +884,7 @@
 			files = (
 				2A0D2BA02153963400E5C6AD /* URLSessionHook.swift in Sources */,
 				2A0D2BA22153963400E5C6AD /* URL+HippolyteAdditions.swift in Sources */,
+				2A0D70312153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
 				2A1F39262152588400E94738 /* Authorization.swift in Sources */,
 				2A0D2B9E2153963400E5C6AD /* Matcher.swift in Sources */,
 				2A0D2B922153963400E5C6AD /* URLHook.swift in Sources */,
@@ -874,6 +893,7 @@
 				2A0D2B962153963400E5C6AD /* StubRequest.swift in Sources */,
 				2A1F39252152588400E94738 /* Api.swift in Sources */,
 				2A0D2B9C2153963400E5C6AD /* Hippolyte.swift in Sources */,
+				2A0D70362153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
 				2A1F38FA215257ED00E94738 /* RidiOAuth2Tests.swift in Sources */,
 				2A0D2BA42153963400E5C6AD /* HTTPRequest.swift in Sources */,
 				2A1F39272152588400E94738 /* TokenPair.swift in Sources */,
@@ -954,6 +974,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DTEST";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1039,6 +1060,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.RidiOAuth2-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1090,6 +1112,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_SWIFT_FLAGS = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.RidiOAuth2-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
@@ -1137,6 +1160,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.RidiOAuth2Tests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -1177,6 +1201,7 @@
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_SWIFT_FLAGS = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ridi.RidiOAuth2Tests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

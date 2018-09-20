@@ -29,34 +29,26 @@ public final class Authorization {
     
     private let cookieStorage = HTTPCookieStorage.shared
     
+    public init(clientId: String, devMode: Bool = false) {
+        self.clientId = clientId
+        self.host = devMode ? Host.dev : Host.real
+        self.api = Api(baseUrl: "https://account.\(host)/")
+    }
+    
+    #if TEST
     public init(clientId: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
         self.clientId = clientId
         self.host = devMode ? Host.dev : Host.real
         self.api = Api(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
     }
-    
-    func makeError(_ statusCode: Int = 0, _ error: Error? = nil) -> Error {
-        let userInfo: [String: Any] = [AuthorizationErrorKey: error ?? "nil"]
-        return NSError(domain: AuthorizationErrorDomain, code: statusCode, userInfo: userInfo)
-    }
-    
-    func makeCookie(_ name: String, value: String, secure: Bool = true) -> HTTPCookie {
-        var properties = [HTTPCookiePropertyKey: Any]()
-        properties[.name] = name
-        properties[.value] = value
-        properties[.domain] = ".\(host)"
-        properties[.originURL] = ".\(host)"
-        properties[.path] = "/"
-        properties[.secure] = secure
-        return HTTPCookie(properties: properties)!
-    }
+    #endif
     
     private func dispatch(
         response: DefaultDataResponse,
         to emitter: ((SingleEvent<TokenPair>) -> Void),
         with filter: () -> Bool
     ) {
-        let error = makeError(response.response?.statusCode ?? 0, response.error)
+        let error = NSError(statusCode: response.response?.statusCode ?? 0, error: response.error)
         if filter() {
             let cookies = cookieStorage.cookies ?? []
             guard let at = cookies.first(where: (host, CookieName.accessToken))?.value,
@@ -99,7 +91,7 @@ public final class Authorization {
     
     public func refreshAccessToken(refreshToken: String) -> Single<TokenPair> {
         cookieStorage.cookieAcceptPolicy = .always
-        cookieStorage.setCookie(makeCookie(CookieName.refreshToken, value: refreshToken))
+        cookieStorage.setCookie(HTTPCookie(url: host, name: CookieName.refreshToken, value: refreshToken))
         return Single<TokenPair>.create { emitter -> Disposable in
             self.api.refreshAccessToken { response in
                 self.dispatch(response: response, to: emitter, with: { () -> Bool in

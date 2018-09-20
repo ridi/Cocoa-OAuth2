@@ -28,30 +28,33 @@ class RidiOAuth2Tests: XCTestCase {
         Hippolyte.shared.stop()
     }
     
+    private var urlMatcher: RegexMatcher {
+        let regex = try! NSRegularExpression(pattern: "https://account.ridibooks.com")
+        return RegexMatcher(regex: regex)
+    }
+    
     private func setUpRequestRidiAuthorizationStub(loginRequired: Bool) {
         let redirectUrl =
             loginRequired ? "https://account.ridibooks.com/login?return_url=login_required" : "app://authorized"
-        let regex = try! NSRegularExpression(pattern: "https://account.ridibooks.com", options: [])
         let response = StubResponse.Builder()
             .stubResponse(withStatusCode: loginRequired ? 200 : 302)
             .addHeader(withKey: "Location", value: redirectUrl)
         let request = StubRequest.Builder()
-            .stubRequest(withMethod: .GET, urlMatcher: RegexMatcher(regex: regex))
+            .stubRequest(withMethod: .GET, urlMatcher: urlMatcher)
             .addResponse(response.build())
         Hippolyte.shared.add(stubbedRequest: request.build())
         Hippolyte.shared.start()
         
         let cookieStorage = HTTPCookieStorage.shared
-        cookieStorage.setCookie(authorization.makeCookie("ridi-at", value: Dummy.accessToken))
-        cookieStorage.setCookie(authorization.makeCookie("ridi-rt", value: Dummy.refreshToken))
+        cookieStorage.setCookie(HTTPCookie(url: ".ridibooks.com", name: "ridi-at", value: Dummy.accessToken))
+        cookieStorage.setCookie(HTTPCookie(url: ".ridibooks.com", name: "ridi-rt", value: Dummy.refreshToken))
     }
     
     private func setUpRefreshAccessTokenStub() {
-        let regex = try! NSRegularExpression(pattern: "https://account.ridibooks.com", options: [])
         let response = StubResponse.Builder()
             .stubResponse(withStatusCode: 200)
         let request = StubRequest.Builder()
-            .stubRequest(withMethod: .POST, urlMatcher: RegexMatcher(regex: regex))
+            .stubRequest(withMethod: .POST, urlMatcher: urlMatcher)
             .addResponse(response.build())
         Hippolyte.shared.add(stubbedRequest: request.build())
         Hippolyte.shared.start()
