@@ -1,6 +1,6 @@
 [submodule "Frameworks/RxSwift"]
 	path = Frameworks/RxSwift
-	url = git@github.com:ReactiveX/RxSwift.git
+	url = https://github.com/ReactiveX/RxSwift.git
 [submodule "Frameworks/Alamofire"]
 	path = Frameworks/Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
