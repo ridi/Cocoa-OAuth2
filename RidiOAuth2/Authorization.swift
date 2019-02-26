@@ -63,7 +63,6 @@ public final class Authorization {
         }
     }
     
-    @available(*, deprecated, message: "use requestPasswordGrantAuthorization: instead")
     public func requestRidiAuthorization() -> Single<TokenPair> {
         return Single<TokenPair>.create { emitter -> Disposable in
             self.api.requestAuthorization(
