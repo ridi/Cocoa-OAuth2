@@ -41,16 +41,16 @@ class ViewController: NSViewController {
     
     private func dispatch(event: SingleEvent<TokenPair>) {
         switch event {
-        case .success(let tokenPair):
-            self.refreshToken = tokenPair.refreshToken
+        case let .success(tokenPair):
+            refreshToken = tokenPair.refreshToken
             let jwt = try! decode(jwt: tokenPair.accessToken)
             let subject = jwt.subject ?? "nil"
             let uIdx = jwt.claim(name: "u_idx").integer ?? 0
             let expDate = jwt.claim(name: "exp").date?.description ?? "nil"
             let message = "Subject = \(subject)\nu_idx = \(uIdx)\nexpDate = \(expDate)"
-            self.alertWith(message: "Success:\n\(message)")
-        case .error(let error):
-            self.alertWith(message: "Error:\n\(error.localizedDescription)")
+            alertWith(message: "Success:\n\(message)")
+        case let .error(error):
+            alertWith(message: "Error:\n\(error.localizedDescription)")
         }
     }
     
@@ -59,12 +59,12 @@ class ViewController: NSViewController {
     }
     
     @IBAction func fetchAccessToken(_ sender: Any) {
-        authorization.requestRidiAuthorization().subscribe(self.dispatch).addDisposableTo(disposeBag)
+        authorization.requestRidiAuthorization().subscribe(dispatch).addDisposableTo(disposeBag)
     }
     
     @IBAction func refreshAccessToken(_ sender: Any) {
         if let token = refreshToken {
-            authorization.refreshAccessToken(refreshToken: token).subscribe(self.dispatch).addDisposableTo(disposeBag)
+            authorization.refreshAccessToken(refreshToken: token).subscribe(dispatch).addDisposableTo(disposeBag)
         }
     }
 }

@@ -31,15 +31,15 @@ public final class Authorization {
     
     public init(clientId: String, devMode: Bool = false) {
         self.clientId = clientId
-        self.host = devMode ? Host.dev : Host.real
-        self.api = Api(baseUrl: "https://account.\(host)/")
+        host = devMode ? Host.dev : Host.real
+        api = Api(baseUrl: "https://account.\(host)/")
     }
     
     #if TEST
     public init(clientId: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
         self.clientId = clientId
-        self.host = devMode ? Host.dev : Host.real
-        self.api = Api(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
+        host = devMode ? Host.dev : Host.real
+        api = Api(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
     }
     #endif
     

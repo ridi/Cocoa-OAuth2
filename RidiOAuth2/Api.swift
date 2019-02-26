@@ -21,7 +21,7 @@ final class Api {
         configuration.httpShouldSetCookies = true
         configuration.protocolClasses = protocolClasses
         
-        self.sessionManager = SessionManager(configuration: configuration)
+        sessionManager = SessionManager(configuration: configuration)
         self.baseUrl = baseUrl
     }
     
