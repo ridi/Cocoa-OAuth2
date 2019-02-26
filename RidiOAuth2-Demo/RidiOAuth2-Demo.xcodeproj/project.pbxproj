@@ -275,6 +275,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JWTDecode-macOS/JWTDecode.framework",
 				"${BUILT_PRODUCTS_DIR}/RidiOAuth2-macOS/RidiOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-macOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-macOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -282,6 +283,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidiOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "function toVersion { echo -e \"$@\" | awk -F. '{ printf(\"%d%03d%03d%03d\\n\", $1,$2,$3,$4); }'; }\nif which swiftlint >/dev/null; then\n    current=$(swiftlint version)\n    require=\"0.27.0\"\n    if [ $(toVersion \"$current\") -ge $(toVersion \"$require\") ]; then\n        cd \"${PROJECT_DIR}/../\"\n        swiftlint\n    else\n        echo \"SwiftLint requires a SwiftLint version of >= $require. You are on $current.\"\n        echo \"Please update using 'brew upgrade swiftlint'.\"\n        exit 101\n    fi\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\n    exit 100\nfi";
+			shellScript = "function toVersion { echo -e \"$@\" | awk -F. '{ printf(\"%d%03d%03d%03d\\n\", $1,$2,$3,$4); }'; }\nif which swiftlint >/dev/null; then\n    current=$(swiftlint version)\n    require=\"0.30.1\"\n    if [ $(toVersion \"$current\") -ge $(toVersion \"$require\") ]; then\n        cd \"${PROJECT_DIR}/../\"\n        swiftlint\n    else\n        echo \"SwiftLint requires a SwiftLint version of >= $require. You are on $current.\"\n        echo \"Please update using 'brew upgrade swiftlint'.\"\n        exit 101\n    fi\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\n    exit 100\nfi\n";
 		};
 		AE19FF81F3286D70FBFDEA6A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -313,6 +315,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JWTDecode-iOS/JWTDecode.framework",
 				"${BUILT_PRODUCTS_DIR}/RidiOAuth2-iOS/RidiOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic-iOS/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -320,6 +323,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWTDecode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RidiOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
