@@ -57,12 +57,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fetchAccessToken() {
-        authorization.requestRidiAuthorization().subscribe(self.dispatch).addDisposableTo(disposeBag)
+        authorization.requestRidiAuthorization().subscribe(self.dispatch).disposed(by: disposeBag)
     }
     
     @IBAction func refreshAccessToken() {
         if let token = refreshToken {
-            authorization.refreshAccessToken(refreshToken: token).subscribe(self.dispatch).addDisposableTo(disposeBag)
+            authorization.refreshAccessToken(refreshToken: token).subscribe(self.dispatch).disposed(by: disposeBag)
         }
     }
 }
