@@ -1,9 +1,6 @@
 language: objective-c
 osx_image: xcode10
 
-install:
-  - brew install swiftlint
-
 env:
   global:
     - WORKSPACE=RidiOAuth2.xcodeproj/project.xcworkspace
