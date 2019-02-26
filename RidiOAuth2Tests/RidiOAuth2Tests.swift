@@ -65,7 +65,7 @@ class RidiOAuth2Tests: XCTestCase {
         
         let expt = expectation(description: "testRidiAuthorization")
         authorization.requestRidiAuthorization().subscribe { event in
-            if case .success(let tokenPair) = event {
+            if case let .success(tokenPair) = event {
                 XCTAssertEqual(tokenPair.accessToken, Dummy.accessToken)
                 XCTAssertEqual(tokenPair.refreshToken, Dummy.refreshToken)
                 expt.fulfill()
@@ -81,7 +81,7 @@ class RidiOAuth2Tests: XCTestCase {
         
         let expt = expectation(description: "testTokenRefresh")
         authorization.refreshAccessToken(refreshToken: Dummy.refreshToken).subscribe { event in
-            if case .success(let tokenPair) = event {
+            if case let .success(tokenPair) = event {
                 XCTAssertEqual(tokenPair.accessToken, Dummy.accessToken)
                 XCTAssertEqual(tokenPair.refreshToken, Dummy.refreshToken)
                 expt.fulfill()
@@ -97,7 +97,7 @@ class RidiOAuth2Tests: XCTestCase {
         
         let expt = expectation(description: "testRedirectingToLoginPage")
         authorization.requestRidiAuthorization().subscribe { event in
-            if case .error(let error) = event {
+            if case let .error(error) = event {
                 XCTAssertEqual((error as NSError).domain, AuthorizationErrorDomain)
                 expt.fulfill()
             } else {

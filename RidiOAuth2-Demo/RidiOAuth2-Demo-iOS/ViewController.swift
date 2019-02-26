@@ -38,17 +38,17 @@ class ViewController: UIViewController {
     
     private func dispatch(event: SingleEvent<TokenPair>) {
         switch event {
-        case .success(let tokenPair):
-            self.refreshToken = tokenPair.refreshToken
+        case let .success(tokenPair):
+            refreshToken = tokenPair.refreshToken
             let jwt = try! decode(jwt: tokenPair.accessToken)
             let title = "Success"
             let subject = jwt.subject ?? "nil"
             let uIdx = jwt.claim(name: "u_idx").integer ?? 0
             let expDate = jwt.claim(name: "exp").date?.description ?? "nil"
             let message = "Subject = \(subject)\nu_idx = \(uIdx)\nexpDate = \(expDate)"
-            self.alertWith(title: title, message: message)
-        case .error(let error):
-            self.alertWith(title: "Error", message: error.localizedDescription)
+            alertWith(title: title, message: message)
+        case let .error(error):
+            alertWith(title: "Error", message: error.localizedDescription)
         }
     }
     
@@ -57,12 +57,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fetchAccessToken() {
-        authorization.requestRidiAuthorization().subscribe(self.dispatch).addDisposableTo(disposeBag)
+        authorization.requestRidiAuthorization().subscribe(dispatch).disposed(by: disposeBag)
     }
     
     @IBAction func refreshAccessToken() {
         if let token = refreshToken {
-            authorization.refreshAccessToken(refreshToken: token).subscribe(self.dispatch).addDisposableTo(disposeBag)
+            authorization.refreshAccessToken(refreshToken: token).subscribe(dispatch).disposed(by: disposeBag)
         }
     }
 }

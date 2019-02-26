@@ -34,7 +34,7 @@ class WebViewController: NSViewController, WebFrameLoadDelegate {
     func webView(_ sender: WebView!, didFinishLoadFor frame: WebFrame!) {
         didLoad()
         if frame.dataSource?.request.url?.absoluteString == "about:blank" {
-            dismissViewController(self)
+            dismiss(self)
         }
     }
     

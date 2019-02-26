@@ -33,9 +33,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     func webView(
         _ webView: UIWebView,
         shouldStartLoadWith request: URLRequest,
-        navigationType: UIWebViewNavigationType
+        navigationType: UIWebView.NavigationType
     ) -> Bool {
-        if request.url?.absoluteString == "https://\(isDevMode ? Global.devHost : Global.realHost)/" {
+        if request.url?.absoluteString == "https://\(isDevMode ? Global.Host.dev : Global.Host.real)/" {
             dismiss(animated: true, completion: nil)
             return false
         }
