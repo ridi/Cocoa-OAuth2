@@ -20,12 +20,12 @@ public final class Authorization {
     }
     
     #if TEST
-    public init(clientId: String, clientSecret: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
-        self.clientId = clientId
-        self.clientSecret = clientSecret
-        host = devMode ? Host.dev : Host.real
-        apiService = ApiService(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
-    }
+        public init(clientId: String, clientSecret: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
+            self.clientId = clientId
+            self.clientSecret = clientSecret
+            host = devMode ? Host.dev : Host.real
+            apiService = ApiService(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
+        }
     #endif
     
     public func requestPasswordGrantAuthorization(username: String, password: String) -> Single<TokenResponse> {
@@ -37,12 +37,8 @@ public final class Authorization {
                 username: username,
                 password: password,
                 refreshToken: nil,
-                success: { tokenResponse in
-                    emitter(.success(tokenResponse))
-                },
-                failure: { error in
-                    emitter(.error(error))
-                }
+                success: { emitter(.success($0)) },
+                failure: { emitter(.error($0)) }
             )
             return Disposables.create()
         }
@@ -57,12 +53,8 @@ public final class Authorization {
                 username: nil,
                 password: nil,
                 refreshToken: refreshToken,
-                success: { tokenResponse in
-                    emitter(.success(tokenResponse))
-                },
-                failure: { error in
-                    emitter(.error(error))
-                }
+                success: { emitter(.success($0)) },
+                failure: { emitter(.error($0)) }
             )
             return Disposables.create()
         }
