@@ -4,6 +4,9 @@ import RidiOAuth2
 import RxSwift
 
 class ViewController: NSViewController {
+    @IBOutlet weak var idTextField: NSTextField!
+    @IBOutlet weak var passwordTextField: NSSecureTextField!
+    
     private let disposeBag = DisposeBag()
     
     private var authorization: Authorization!
@@ -12,10 +15,10 @@ class ViewController: NSViewController {
     
     private var isDevMode = false {
         didSet {
-            Global.removeAllCookies()
             refreshToken = nil
             let clientId = isDevMode ? Global.ClientID.dev : Global.ClientID.real
-            authorization = Authorization(clientId: clientId, devMode: isDevMode)
+            let clientSecret = isDevMode ? Global.ClientSecret.dev : Global.ClientSecret.real
+            authorization = Authorization(clientId: clientId, clientSecret: clientSecret, devMode: isDevMode)
         }
     }
     
@@ -25,32 +28,25 @@ class ViewController: NSViewController {
         isDevMode = false
     }
     
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if segue.identifier == "login" {
-            (segue.destinationController as! WebViewController).isDevMode = isDevMode
-        }
-    }
-    
-    private func alertWith(message: String) {
+    private func makeAlert(message: String) {
         let alert = NSAlert()
         alert.messageText = message
         alert.addButton(withTitle: "확인")
         alert.beginSheetModal(for: view.window!, completionHandler: nil)
     }
     
-    private func dispatch(event: SingleEvent<TokenPair>) {
+    private func dispatch(event: SingleEvent<TokenResponse>) {
         switch event {
-        case let .success(tokenPair):
-            refreshToken = tokenPair.refreshToken
-            let jwt = try! decode(jwt: tokenPair.accessToken)
+        case let .success(tokenResponse):
+            refreshToken = tokenResponse.refreshToken
+            let jwt = try! decode(jwt: tokenResponse.accessToken)
             let subject = jwt.subject ?? "nil"
             let uIdx = jwt.claim(name: "u_idx").integer ?? 0
             let expDate = jwt.claim(name: "exp").date?.description ?? "nil"
             let message = "Subject = \(subject)\nu_idx = \(uIdx)\nexpDate = \(expDate)"
-            alertWith(message: "Success:\n\(message)")
+            makeAlert(message: "Success:\n\(message)")
         case let .error(error):
-            alertWith(message: "Error:\n\(error.localizedDescription)")
+            makeAlert(message: "Error:\n\(error.localizedDescription)")
         }
     }
     
@@ -59,12 +55,18 @@ class ViewController: NSViewController {
     }
     
     @IBAction func fetchAccessToken(_ sender: Any) {
-        authorization.requestRidiAuthorization().subscribe(dispatch).addDisposableTo(disposeBag)
+        let username = idTextField.stringValue
+        let password = passwordTextField.stringValue
+        authorization.requestPasswordGrantAuthorization(username: username, password: password)
+            .subscribe(dispatch)
+            .disposed(by: disposeBag)
     }
     
     @IBAction func refreshAccessToken(_ sender: Any) {
         if let token = refreshToken {
-            authorization.refreshAccessToken(refreshToken: token).subscribe(dispatch).addDisposableTo(disposeBag)
+            authorization.refreshAccessToken(refreshToken: token)
+                .subscribe(dispatch)
+                .disposed(by: disposeBag)
         }
     }
 }
