@@ -5,7 +5,7 @@ enum ResponseType: String {
     case password
 }
 
-final class Api {
+final class ApiService {
     private let timeout: TimeInterval = 10
     
     private let sessionManager: SessionManager

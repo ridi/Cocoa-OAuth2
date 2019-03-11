@@ -23,7 +23,7 @@ public final class Authorization {
     
     private let clientId: String
     private let host: String
-    private let api: Api
+    private let apiService: ApiService
     
     private let redirectUri = "app://authorized"
     
@@ -32,14 +32,14 @@ public final class Authorization {
     public init(clientId: String, devMode: Bool = false) {
         self.clientId = clientId
         host = devMode ? Host.dev : Host.real
-        api = Api(baseUrl: "https://account.\(host)/")
+        apiService = ApiService(baseUrl: "https://account.\(host)/")
     }
     
     #if TEST
     public init(clientId: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
         self.clientId = clientId
         host = devMode ? Host.dev : Host.real
-        api = Api(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
+        apiService = ApiService(baseUrl: "https://account.\(host)/", protocolClasses: protocolClasses)
     }
     #endif
     
@@ -65,7 +65,7 @@ public final class Authorization {
     
     public func requestRidiAuthorization() -> Single<TokenPair> {
         return Single<TokenPair>.create { emitter -> Disposable in
-            self.api.requestAuthorization(
+            self.apiService.requestAuthorization(
                 clientId: self.clientId,
                 responseType: .code,
                 redirectUri: self.redirectUri
@@ -92,7 +92,7 @@ public final class Authorization {
         cookieStorage.cookieAcceptPolicy = .always
         cookieStorage.setCookie(HTTPCookie(url: host, name: CookieName.refreshToken, value: refreshToken))
         return Single<TokenPair>.create { emitter -> Disposable in
-            self.api.refreshAccessToken { response in
+            self.apiService.refreshAccessToken { response in
                 self.dispatch(response: response, to: emitter, with: { () -> Bool in
                     let statusCode = response.response?.statusCode ?? 0
                     return statusCode == 200
