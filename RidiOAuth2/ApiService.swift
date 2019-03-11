@@ -1,8 +1,21 @@
 import Alamofire
 
-enum ResponseType: String {
-    case code
+enum GrantType: String {
     case password
+    case refresh  = "refresh_token"
+}
+
+private extension Dictionary where Key == String {
+    subscript(safe key: Key) -> Value? {
+        get {
+            return self[key]
+        }
+        set {
+            if let newValue = newValue {
+                self[key] = newValue
+            }
+        }
+    }
 }
 
 final class ApiService {
@@ -29,19 +42,40 @@ final class ApiService {
         return URL(string: baseUrl)!.appendingPathComponent(path)
     }
     
-    func requestAuthorization(
-        clientId: String,
-        responseType: ResponseType,
-        redirectUri: String,
-        completion: @escaping (DefaultDataResponse) -> Void
+    func requestToken(
+        grantType: GrantType,
+        clientId: String? = nil,
+        clientSecret: String? = nil,
+        username: String? = nil,
+        password: String? = nil,
+        refreshToken: String? = nil,
+        success: @escaping (TokenResponse) -> Void,
+        failure: @escaping (NSError) -> Void
     ) {
-        let url = createUrl(path: "ridi/authorize")
-        let parameters: Parameters = ["client_id": clientId, "response_type": responseType, "redirect_uri": redirectUri]
-        sessionManager.request(url, method: .get, parameters: parameters).response(completionHandler: completion)
-    }
-    
-    func refreshAccessToken(completion: @escaping (DefaultDataResponse) -> Void) {
-        let url = createUrl(path: "ridi/token")
-        sessionManager.request(url, method: .post).response(completionHandler: completion)
+        let url = createUrl(path: "oauth2/token")
+        var parameters: Parameters = ["grant_type": grantType.rawValue]
+        parameters[safe: "client_id"] = clientId
+        parameters[safe: "client_secret"] = clientSecret
+        parameters[safe: "username"] = username
+        parameters[safe: "password"] = password
+        parameters[safe: "refresh_token"] = refreshToken
+        sessionManager.request(url, method: .post, parameters: parameters).responseJSON(completionHandler: { response in
+            let error = response.result.error as NSError?
+            let statusCode = response.response?.statusCode
+            if let value = response.result.value as? [String: Any] {
+                if let tokenResponse = TokenResponse(dictionary: value) {
+                    success(tokenResponse)
+                } else {
+                    failure(NSError(
+                        error: error,
+                        statusCode: statusCode,
+                        errorCode: value["error"] as? String,
+                        errorDescription: value["error_description"] as? String
+                    ))
+                }
+            } else {
+                failure(NSError(error: error, statusCode: statusCode, errorCode: nil, errorDescription: nil))
+            }
+        })
     }
 }
