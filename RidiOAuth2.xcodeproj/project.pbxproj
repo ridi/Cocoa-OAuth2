@@ -31,32 +31,27 @@
 		2A0D702F2153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
 		2A0D70302153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
 		2A0D70312153C0C600178DA3 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */; };
-		2A0D70332153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
-		2A0D70342153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
-		2A0D70352153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
-		2A0D70362153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */; };
 		2A1F38CC2152563A00E94738 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F3863215255B200E94738 /* Alamofire.framework */; };
 		2A1F38CD2152563A00E94738 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F3889215255C200E94738 /* RxSwift.framework */; };
 		2A1F38CE2152564500E94738 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F3867215255B200E94738 /* Alamofire.framework */; };
-		2A1F38CF2152564500E94738 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F388B215255C200E94738 /* RxSwift.framework */; };
 		2A1F38DF2152568B00E94738 /* RidiOAuth2_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F38B7215255EE00E94738 /* RidiOAuth2_iOS.framework */; };
 		2A1F38EE215256A100E94738 /* RidiOAuth2_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1F38C42152561A00E94738 /* RidiOAuth2_macOS.framework */; };
 		2A1F38F9215257ED00E94738 /* RidiOAuth2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38F7215257EC00E94738 /* RidiOAuth2Tests.swift */; };
 		2A1F38FA215257ED00E94738 /* RidiOAuth2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38F7215257EC00E94738 /* RidiOAuth2Tests.swift */; };
-		2A1F391C2152588000E94738 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38552152559600E94738 /* Api.swift */; };
 		2A1F391D2152588000E94738 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38542152559600E94738 /* Authorization.swift */; };
-		2A1F391E2152588000E94738 /* TokenPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38532152559600E94738 /* TokenPair.swift */; };
-		2A1F391F2152588100E94738 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38552152559600E94738 /* Api.swift */; };
 		2A1F39202152588100E94738 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38542152559600E94738 /* Authorization.swift */; };
-		2A1F39212152588100E94738 /* TokenPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38532152559600E94738 /* TokenPair.swift */; };
-		2A1F39222152588300E94738 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38552152559600E94738 /* Api.swift */; };
 		2A1F39232152588300E94738 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38542152559600E94738 /* Authorization.swift */; };
-		2A1F39242152588300E94738 /* TokenPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38532152559600E94738 /* TokenPair.swift */; };
-		2A1F39252152588400E94738 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38552152559600E94738 /* Api.swift */; };
 		2A1F39262152588400E94738 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38542152559600E94738 /* Authorization.swift */; };
-		2A1F39272152588400E94738 /* TokenPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1F38532152559600E94738 /* TokenPair.swift */; };
 		2A1F39282152588700E94738 /* RidiOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1F384B2152553600E94738 /* RidiOAuth2.h */; };
 		2A1F39292152588800E94738 /* RidiOAuth2.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A1F384B2152553600E94738 /* RidiOAuth2.h */; };
+		2A82ABB52236626D00B933F9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB42236626D00B933F9 /* ApiService.swift */; };
+		2A82ABB72236628700B933F9 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB62236628700B933F9 /* TokenResponse.swift */; };
+		2A82ABB82236628D00B933F9 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB62236628700B933F9 /* TokenResponse.swift */; };
+		2A82ABB92236628E00B933F9 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB62236628700B933F9 /* TokenResponse.swift */; };
+		2A82ABBA2236628E00B933F9 /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB62236628700B933F9 /* TokenResponse.swift */; };
+		2A82ABBB2236629400B933F9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB42236626D00B933F9 /* ApiService.swift */; };
+		2A82ABBC2236629400B933F9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB42236626D00B933F9 /* ApiService.swift */; };
+		2A82ABBD2236629500B933F9 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A82ABB42236626D00B933F9 /* ApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,54 +111,12 @@
 			remoteGlobalIDString = C8A56AD71AD7424700B4673B;
 			remoteInfo = "RxSwift-iOS";
 		};
-		2A1F388A215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C88BB8711B07E5ED0064D411;
-			remoteInfo = "RxSwift-macOS";
-		};
-		2A1F388C215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2EA280C1BB9B5A200880ED3;
-			remoteInfo = "RxSwift-tvOS";
-		};
-		2A1F388E215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8F0C0021BBBFB8B001B112F;
-			remoteInfo = "RxSwift-watchOS";
-		};
 		2A1F3890215255C200E94738 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C809396D1B8A71760088E94D;
 			remoteInfo = "RxCocoa-iOS";
-		};
-		2A1F3892215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C80939E71B8A71840088E94D;
-			remoteInfo = "RxCocoa-macOS";
-		};
-		2A1F3894215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2138C751BB9BE9800339B5C;
-			remoteInfo = "RxCocoa-tvOS";
-		};
-		2A1F3896215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8F0C04B1BBBFBB9001B112F;
-			remoteInfo = "RxCocoa-watchOS";
 		};
 		2A1F3898215255C200E94738 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -172,54 +125,12 @@
 			remoteGlobalIDString = C8093BC71B8A71F00088E94D;
 			remoteInfo = "RxBlocking-iOS";
 		};
-		2A1F389A215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8093C451B8A71FC0088E94D;
-			remoteInfo = "RxBlocking-macOS";
-		};
-		2A1F389C215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2EBEB811BB9B99D003A27DC;
-			remoteInfo = "RxBlocking-tvOS";
-		};
-		2A1F389E215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8F0C0581BBBFBCE001B112F;
-			remoteInfo = "RxBlocking-watchOS";
-		};
 		2A1F38A0215255C200E94738 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C88FA50C1C25C44800CCFEA4;
 			remoteInfo = "RxTest-iOS";
-		};
-		2A1F38A2215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C88FA51D1C25C4B500CCFEA4;
-			remoteInfo = "RxTest-macOS";
-		};
-		2A1F38A4215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C88FA52E1C25C4C000CCFEA4;
-			remoteInfo = "RxTest-tvOS";
-		};
-		2A1F38A6215255C200E94738 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C88FA53F1C25C4CC00CCFEA4;
-			remoteInfo = "RxTest-watchOS";
 		};
 		2A1F38A8215255C200E94738 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -270,6 +181,13 @@
 			remoteGlobalIDString = 2A1F38C32152561A00E94738;
 			remoteInfo = "RidiOAuth2-macOS";
 		};
+		2A82ABB22236625700B933F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A1F3870215255C200E94738 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8165ABC21891AFF00494BEF;
+			remoteInfo = RxAtomic;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -284,12 +202,9 @@
 		2A0D2B8F2153963400E5C6AD /* URL+HippolyteAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+HippolyteAdditions.swift"; path = "Frameworks/Hippolyte/Hippolyte/URL+HippolyteAdditions.swift"; sourceTree = "<group>"; };
 		2A0D2B902153963400E5C6AD /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPRequest.swift; path = Frameworks/Hippolyte/Hippolyte/HTTPRequest.swift; sourceTree = "<group>"; };
 		2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExtension.swift; sourceTree = "<group>"; };
-		2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCookieExtension.swift; sourceTree = "<group>"; };
 		2A1F384B2152553600E94738 /* RidiOAuth2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RidiOAuth2.h; sourceTree = "<group>"; };
 		2A1F384C2152553600E94738 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A1F38532152559600E94738 /* TokenPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenPair.swift; sourceTree = "<group>"; };
 		2A1F38542152559600E94738 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
-		2A1F38552152559600E94738 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		2A1F3857215255B100E94738 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Frameworks/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		2A1F3870215255C200E94738 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Frameworks/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		2A1F38B7215255EE00E94738 /* RidiOAuth2_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RidiOAuth2_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +213,8 @@
 		2A1F38E9215256A100E94738 /* RidiOAuth2Tests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RidiOAuth2Tests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A1F38F7215257EC00E94738 /* RidiOAuth2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidiOAuth2Tests.swift; sourceTree = "<group>"; };
 		2A1F38F8215257EC00E94738 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A82ABB42236626D00B933F9 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		2A82ABB62236628700B933F9 /* TokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,7 +232,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1F38CE2152564500E94738 /* Alamofire.framework in Frameworks */,
-				2A1F38CF2152564500E94738 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,11 +297,10 @@
 			children = (
 				2A1F384B2152553600E94738 /* RidiOAuth2.h */,
 				2A1F384C2152553600E94738 /* Info.plist */,
-				2A1F38552152559600E94738 /* Api.swift */,
+				2A82ABB42236626D00B933F9 /* ApiService.swift */,
 				2A1F38542152559600E94738 /* Authorization.swift */,
-				2A0D70322153C15D00178DA3 /* HTTPCookieExtension.swift */,
 				2A0D702D2153C0C600178DA3 /* NSErrorExtension.swift */,
-				2A1F38532152559600E94738 /* TokenPair.swift */,
+				2A82ABB62236628700B933F9 /* TokenResponse.swift */,
 			);
 			path = RidiOAuth2;
 			sourceTree = "<group>";
@@ -417,22 +332,11 @@
 		2A1F3871215255C200E94738 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				2A82ABB32236625700B933F9 /* RxAtomic.framework */,
 				2A1F3889215255C200E94738 /* RxSwift.framework */,
-				2A1F388B215255C200E94738 /* RxSwift.framework */,
-				2A1F388D215255C200E94738 /* RxSwift.framework */,
-				2A1F388F215255C200E94738 /* RxSwift.framework */,
 				2A1F3891215255C200E94738 /* RxCocoa.framework */,
-				2A1F3893215255C200E94738 /* RxCocoa.framework */,
-				2A1F3895215255C200E94738 /* RxCocoa.framework */,
-				2A1F3897215255C200E94738 /* RxCocoa.framework */,
 				2A1F3899215255C200E94738 /* RxBlocking.framework */,
-				2A1F389B215255C200E94738 /* RxBlocking.framework */,
-				2A1F389D215255C200E94738 /* RxBlocking.framework */,
-				2A1F389F215255C200E94738 /* RxBlocking.framework */,
 				2A1F38A1215255C200E94738 /* RxTest.framework */,
-				2A1F38A3215255C200E94738 /* RxTest.framework */,
-				2A1F38A5215255C200E94738 /* RxTest.framework */,
-				2A1F38A7215255C200E94738 /* RxTest.framework */,
 				2A1F38A9215255C200E94738 /* AllTests-iOS.xctest */,
 				2A1F38AB215255C200E94738 /* AllTests-tvOS.xctest */,
 				2A1F38AD215255C200E94738 /* AllTests-macOS.xctest */,
@@ -656,53 +560,11 @@
 			remoteRef = 2A1F3888215255C200E94738 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A1F388B215255C200E94738 /* RxSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxSwift.framework;
-			remoteRef = 2A1F388A215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F388D215255C200E94738 /* RxSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxSwift.framework;
-			remoteRef = 2A1F388C215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F388F215255C200E94738 /* RxSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxSwift.framework;
-			remoteRef = 2A1F388E215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		2A1F3891215255C200E94738 /* RxCocoa.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxCocoa.framework;
 			remoteRef = 2A1F3890215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F3893215255C200E94738 /* RxCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxCocoa.framework;
-			remoteRef = 2A1F3892215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F3895215255C200E94738 /* RxCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxCocoa.framework;
-			remoteRef = 2A1F3894215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F3897215255C200E94738 /* RxCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxCocoa.framework;
-			remoteRef = 2A1F3896215255C200E94738 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		2A1F3899215255C200E94738 /* RxBlocking.framework */ = {
@@ -712,53 +574,11 @@
 			remoteRef = 2A1F3898215255C200E94738 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2A1F389B215255C200E94738 /* RxBlocking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxBlocking.framework;
-			remoteRef = 2A1F389A215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F389D215255C200E94738 /* RxBlocking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxBlocking.framework;
-			remoteRef = 2A1F389C215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F389F215255C200E94738 /* RxBlocking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxBlocking.framework;
-			remoteRef = 2A1F389E215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		2A1F38A1215255C200E94738 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = RxTest.framework;
 			remoteRef = 2A1F38A0215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F38A3215255C200E94738 /* RxTest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxTest.framework;
-			remoteRef = 2A1F38A2215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F38A5215255C200E94738 /* RxTest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxTest.framework;
-			remoteRef = 2A1F38A4215255C200E94738 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2A1F38A7215255C200E94738 /* RxTest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxTest.framework;
-			remoteRef = 2A1F38A6215255C200E94738 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		2A1F38A9215255C200E94738 /* AllTests-iOS.xctest */ = {
@@ -795,6 +615,13 @@
 			fileType = wrapper.cfbundle;
 			path = Benchmarks.xctest;
 			remoteRef = 2A1F38B0215255C200E94738 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2A82ABB32236625700B933F9 /* RxAtomic.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxAtomic.framework;
+			remoteRef = 2A82ABB22236625700B933F9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -835,11 +662,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A1F391F2152588100E94738 /* Api.swift in Sources */,
 				2A0D702E2153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
-				2A0D70332153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
-				2A1F39212152588100E94738 /* TokenPair.swift in Sources */,
 				2A1F39202152588100E94738 /* Authorization.swift in Sources */,
+				2A82ABB72236628700B933F9 /* TokenResponse.swift in Sources */,
+				2A82ABB52236626D00B933F9 /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,10 +673,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A1F391C2152588000E94738 /* Api.swift in Sources */,
 				2A0D70302153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
-				2A0D70352153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
-				2A1F391E2152588000E94738 /* TokenPair.swift in Sources */,
+				2A82ABB92236628E00B933F9 /* TokenResponse.swift in Sources */,
+				2A82ABBC2236629400B933F9 /* ApiService.swift in Sources */,
 				2A1F391D2152588000E94738 /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -861,6 +686,7 @@
 			files = (
 				2A0D2B9F2153963400E5C6AD /* URLSessionHook.swift in Sources */,
 				2A0D2BA12153963400E5C6AD /* URL+HippolyteAdditions.swift in Sources */,
+				2A82ABB82236628D00B933F9 /* TokenResponse.swift in Sources */,
 				2A0D702F2153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
 				2A1F39232152588300E94738 /* Authorization.swift in Sources */,
 				2A0D2B9D2153963400E5C6AD /* Matcher.swift in Sources */,
@@ -868,12 +694,10 @@
 				2A0D2B972153963400E5C6AD /* HTTPStubURLProtocol.swift in Sources */,
 				2A0D2B992153963400E5C6AD /* StubResponse.swift in Sources */,
 				2A0D2B952153963400E5C6AD /* StubRequest.swift in Sources */,
-				2A1F39222152588300E94738 /* Api.swift in Sources */,
 				2A0D2B9B2153963400E5C6AD /* Hippolyte.swift in Sources */,
-				2A0D70342153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
+				2A82ABBB2236629400B933F9 /* ApiService.swift in Sources */,
 				2A1F38F9215257ED00E94738 /* RidiOAuth2Tests.swift in Sources */,
 				2A0D2BA32153963400E5C6AD /* HTTPRequest.swift in Sources */,
-				2A1F39242152588300E94738 /* TokenPair.swift in Sources */,
 				2A0D2B932153963400E5C6AD /* HTTPClientHook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,6 +708,7 @@
 			files = (
 				2A0D2BA02153963400E5C6AD /* URLSessionHook.swift in Sources */,
 				2A0D2BA22153963400E5C6AD /* URL+HippolyteAdditions.swift in Sources */,
+				2A82ABBA2236628E00B933F9 /* TokenResponse.swift in Sources */,
 				2A0D70312153C0C600178DA3 /* NSErrorExtension.swift in Sources */,
 				2A1F39262152588400E94738 /* Authorization.swift in Sources */,
 				2A0D2B9E2153963400E5C6AD /* Matcher.swift in Sources */,
@@ -891,12 +716,10 @@
 				2A0D2B982153963400E5C6AD /* HTTPStubURLProtocol.swift in Sources */,
 				2A0D2B9A2153963400E5C6AD /* StubResponse.swift in Sources */,
 				2A0D2B962153963400E5C6AD /* StubRequest.swift in Sources */,
-				2A1F39252152588400E94738 /* Api.swift in Sources */,
 				2A0D2B9C2153963400E5C6AD /* Hippolyte.swift in Sources */,
-				2A0D70362153C15D00178DA3 /* HTTPCookieExtension.swift in Sources */,
+				2A82ABBD2236629500B933F9 /* ApiService.swift in Sources */,
 				2A1F38FA215257ED00E94738 /* RidiOAuth2Tests.swift in Sources */,
 				2A0D2BA42153963400E5C6AD /* HTTPRequest.swift in Sources */,
-				2A1F39272152588400E94738 /* TokenPair.swift in Sources */,
 				2A0D2B942153963400E5C6AD /* HTTPClientHook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

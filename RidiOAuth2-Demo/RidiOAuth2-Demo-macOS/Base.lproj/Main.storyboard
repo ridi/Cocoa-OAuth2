@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -665,7 +664,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Ridi OAuth2 Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Ridi OAuth2 Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -706,21 +705,8 @@
                                     <action selector="switchMode:" target="XfG-lQ-9wD" id="y4m-uo-HWn"/>
                                 </connections>
                             </segmentedControl>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="s2H-Vq-92M">
-                                <rect key="frame" x="203" y="206" width="74" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="had-u7-dlZ"/>
-                                </constraints>
-                                <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XKG-50-b0Z">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="vys-3q-5R4" kind="modal" identifier="login" id="IKL-I3-vrE"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yOU-eY-61Y">
-                                <rect key="frame" x="161" y="168" width="158" height="32"/>
+                                <rect key="frame" x="161" y="137" width="158" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ReH-6f-6A4"/>
                                 </constraints>
@@ -733,7 +719,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sMq-Vd-Env">
-                                <rect key="frame" x="155" y="130" width="170" height="32"/>
+                                <rect key="frame" x="155" y="99" width="170" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YfU-ZQ-ngU"/>
                                 </constraints>
@@ -745,65 +731,53 @@
                                     <action selector="refreshAccessToken:" target="XfG-lQ-9wD" id="6DX-PB-Nfw"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytz-vv-a4h">
+                                <rect key="frame" x="154" y="216" width="172" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="LUg-Fk-U32"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="ID" drawsBackground="YES" id="BEC-kx-lOb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <secureTextField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kel-B2-VMb">
+                                <rect key="frame" x="154" y="184" width="172" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="Uv9-vw-ShM"/>
+                                </constraints>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="kPn-0m-eAg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="yOU-eY-61Y" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="77F-of-Eft"/>
-                            <constraint firstItem="yOU-eY-61Y" firstAttribute="top" secondItem="s2H-Vq-92M" secondAttribute="bottom" constant="17" id="DYB-Oa-6qJ"/>
+                            <constraint firstItem="Ytz-vv-a4h" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="BF1-2P-Bkf"/>
+                            <constraint firstItem="yOU-eY-61Y" firstAttribute="top" secondItem="kel-B2-VMb" secondAttribute="bottom" constant="19" id="Fpo-z6-zmn"/>
+                            <constraint firstItem="kel-B2-VMb" firstAttribute="top" secondItem="Ytz-vv-a4h" secondAttribute="bottom" constant="10" id="HqM-uh-M00"/>
                             <constraint firstItem="sMq-Vd-Env" firstAttribute="top" secondItem="yOU-eY-61Y" secondAttribute="bottom" constant="17" id="Lpd-g3-SwV"/>
-                            <constraint firstItem="s2H-Vq-92M" firstAttribute="top" secondItem="7uw-KZ-Bj8" secondAttribute="bottom" constant="20" id="St7-KD-B1C"/>
+                            <constraint firstItem="kel-B2-VMb" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Tpv-yg-mxx"/>
                             <constraint firstItem="7uw-KZ-Bj8" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="VwK-tW-B1Q"/>
-                            <constraint firstItem="s2H-Vq-92M" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ffE-1C-i7s"/>
+                            <constraint firstItem="Ytz-vv-a4h" firstAttribute="top" secondItem="7uw-KZ-Bj8" secondAttribute="bottom" constant="16" id="ZF4-Ee-XBc"/>
                             <constraint firstItem="sMq-Vd-Env" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="l9L-TM-F4F"/>
                             <constraint firstItem="7uw-KZ-Bj8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="miu-Vc-1il"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="Ytz-vv-a4h" id="EOg-3A-UTH"/>
+                        <outlet property="passwordTextField" destination="kel-B2-VMb" id="oTd-pm-doi"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="653"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="ONd-NC-BnF">
-            <objects>
-                <viewController title="Login" id="vys-3q-5R4" customClass="WebViewController" customModule="RidiOAuth2_Demo_macOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ftP-SV-p7v">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="650"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="5Ds-tI-Cnu">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="650"/>
-                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
-                                    <nil key="identifier"/>
-                                </webPreferences>
-                                <connections>
-                                    <outlet property="frameLoadDelegate" destination="vys-3q-5R4" id="KSf-om-Y1E"/>
-                                </connections>
-                            </webView>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="QfM-rO-7Mn">
-                                <rect key="frame" x="192" y="317" width="16" height="16"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="5mm-Gb-uxN"/>
-                                    <constraint firstAttribute="width" constant="16" id="vhQ-Qm-eCn"/>
-                                </constraints>
-                            </progressIndicator>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="5Ds-tI-Cnu" firstAttribute="leading" secondItem="ftP-SV-p7v" secondAttribute="leading" id="BCF-JW-Aok"/>
-                            <constraint firstAttribute="bottom" secondItem="5Ds-tI-Cnu" secondAttribute="bottom" id="Gbg-LH-Zwi"/>
-                            <constraint firstItem="5Ds-tI-Cnu" firstAttribute="top" secondItem="ftP-SV-p7v" secondAttribute="top" id="KA8-9C-e9s"/>
-                            <constraint firstItem="QfM-rO-7Mn" firstAttribute="centerY" secondItem="ftP-SV-p7v" secondAttribute="centerY" id="Llt-Y9-TTz"/>
-                            <constraint firstItem="QfM-rO-7Mn" firstAttribute="centerX" secondItem="ftP-SV-p7v" secondAttribute="centerX" id="M4g-Iv-PUg"/>
-                            <constraint firstAttribute="trailing" secondItem="5Ds-tI-Cnu" secondAttribute="trailing" id="S1U-lk-MS0"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="indicator" destination="QfM-rO-7Mn" id="kmq-hn-Bky"/>
-                        <outlet property="webView" destination="5Ds-tI-Cnu" id="o4w-35-vfr"/>
-                    </connections>
-                </viewController>
-                <customObject id="hlQ-Vv-fgG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="645" y="830"/>
+            <point key="canvasLocation" x="75" y="652.5"/>
         </scene>
     </scenes>
 </document>
