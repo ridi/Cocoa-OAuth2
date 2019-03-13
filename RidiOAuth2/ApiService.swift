@@ -44,8 +44,8 @@ final class ApiService {
     
     func requestToken(
         grantType: GrantType,
-        clientId: String? = nil,
-        clientSecret: String? = nil,
+        clientId: String,
+        clientSecret: String,
         username: String? = nil,
         password: String? = nil,
         refreshToken: String? = nil,
