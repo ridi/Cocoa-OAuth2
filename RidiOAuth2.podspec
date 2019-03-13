@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'RidiOAuth2'
-  s.version      = '1.0.0'
+  s.version      = '1.1.0'
   s.summary      = 'OAuth2 client library written in Swift for RIDI account authorization.'
   s.homepage     = 'https://github.com/ridi/cocoa-oauth2'
   s.authors      = { 'Ridibooks Viewer Team' => 'viewer.team@ridi.com' }
