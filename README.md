@@ -2,7 +2,7 @@
 
 > OAuth2 client library written in Swift for RIDI account authorization.
 
-[![Build Status](https://travis-ci.org/ridi/cocoa-oauth2.svg?branch=master)](https://travis-ci.org/ridi/cocoa-oauth2)
+[![Build Status](https://travis-ci.com/ridi/cocoa-oauth2.svg?branch=master)](https://travis-ci.com/ridi/cocoa-oauth2)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/RidiOAuth2.svg?style=flat)](https://cocoadocs.org/docsets/RidiOAuth2)
 [![Platform](https://img.shields.io/cocoapods/p/RidiOAuth2.svg?style=flat)](https://cocoadocs.org/docsets/RidiOAuth2)
 [![License](https://img.shields.io/cocoapods/l/RidiOAuth2.svg?style=flat)](https://cocoadocs.org/docsets/RidiOAuth2)
