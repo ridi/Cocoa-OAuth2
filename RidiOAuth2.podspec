@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
   s.source       = { :git => 'https://github.com/ridi/cocoa-oauth2.git', :tag => s.version }
-  s.source_files = 'RidiOAuth2/*.swift'
+  s.source_files = 'Sources/RidiOAuth2/*.swift'
   s.frameworks   = 'Foundation'
   s.dependency 'Alamofire', '~> 4.0'
   s.dependency 'RxSwift', '~> 4.0'
