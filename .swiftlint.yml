@@ -3,10 +3,8 @@
 reporter: "xcode"
 
 included:
-  - RidiOAuth2
-  - RidiOAuth2-Demo/RidiOAuth2-Demo-iOS
-  - RidiOAuth2-Demo/RidiOAuth2-Demo-macOS
-  - RidiOAuth2-Demo/RidiOAuth2-Demo-tvOS
+  - Sources
+  - Demo
 
 disabled_rules:
   - block_based_kvo # Prefer the new block based KVO API with keypaths when using Swift 3.2 or later.
