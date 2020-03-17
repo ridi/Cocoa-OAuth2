@@ -1,4 +1,5 @@
 import Alamofire
+import Foundation
 
 enum GrantType: String {
     case password

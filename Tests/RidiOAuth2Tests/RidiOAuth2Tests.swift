@@ -1,12 +1,10 @@
-#if os(iOS)
-@testable import RidiOAuth2_iOS
-#else
-@testable import RidiOAuth2_macOS
-#endif
-import RxSwift
+import Foundation
 import XCTest
+import RxSwift
+import Hippolyte
+@testable import RidiOAuth2
 
-class RidiOAuth2Tests: XCTestCase {
+final class RidiOAuth2Tests: XCTestCase {
     private let disposeBag = DisposeBag()
     
     private var authorization: Authorization!
@@ -29,8 +27,7 @@ class RidiOAuth2Tests: XCTestCase {
     override func setUp() {
         authorization = Authorization(
             clientId: Dummy.clientId,
-            clientSecret: Dummy.clientSecret,
-            protocolClasses: [HTTPStubURLProtocol.self]
+            clientSecret: Dummy.clientSecret
         )
     }
     
@@ -109,4 +106,9 @@ class RidiOAuth2Tests: XCTestCase {
             .disposed(by: disposeBag)
         wait(for: [expt], timeout: 5)
     }
+
+    static var allTests = [
+        ("testRequestPasswordGrantAuthorization", testRequestPasswordGrantAuthorization),
+        ("testRequestPasswordGrantAuthorizationError", testRequestPasswordGrantAuthorizationError),
+    ]
 }
