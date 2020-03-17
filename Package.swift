@@ -20,7 +20,7 @@ let package = Package(
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "4.0.0")),
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "4.0.0")),
-        .package(url: "https://github.com/JanGorman/Hippolyte.git", .upToNextMajor(from: "0.8.0"))
+        .package(url: "https://github.com/JanGorman/Hippolyte.git", .upToNextMajor(from: "1.0.0"))
 
     ],
     targets: [
