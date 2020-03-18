@@ -1,9 +1,8 @@
 language: objective-c
-osx_image: xcode10
+osx_image: xcode11.3
 
-env:
-  global:
-    - WORKSPACE=RidiOAuth2.xcodeproj/project.xcworkspace
+install:
+  - brew install swiftlint
 
 matrix:
   include:
@@ -11,7 +10,9 @@ matrix:
     - env: DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=11.4" SCHEME=iOS SDK="iphonesimulator"
 
 script:
-  - xcodebuild -workspace $WORKSPACE -scheme RidiOAuth2Tests-$SCHEME -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
+  - swiftlint
+  - swift package generate-xcodeproj
+  - xcodebuild -scheme RidiOAuth2-Package -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO test | xcpretty -c
 
 notifications:
   email: false
