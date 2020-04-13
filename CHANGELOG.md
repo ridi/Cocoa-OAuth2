@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * None.
 
+## [1.1.1 (2020-04-13)]
+
+### Added
+
+* Supports SwiftPM.
+
 ## [1.1.0 (2019-03-13)]
 
 ### Changed
