@@ -50,6 +50,7 @@ final class ApiService {
         username: String? = nil,
         password: String? = nil,
         refreshToken: String? = nil,
+        extraData: [String: String] = [:],
         success: @escaping (TokenResponse) -> Void,
         failure: @escaping (NSError) -> Void
     ) {
@@ -60,6 +61,7 @@ final class ApiService {
         parameters[safe: "username"] = username
         parameters[safe: "password"] = password
         parameters[safe: "refresh_token"] = refreshToken
+        extraData.forEach { parameters[safe: $0.key] = $0.value }
         sessionManager.request(url, method: .post, parameters: parameters).responseJSON(completionHandler: { response in
             let error = response.result.error as NSError?
             let statusCode = response.response?.statusCode

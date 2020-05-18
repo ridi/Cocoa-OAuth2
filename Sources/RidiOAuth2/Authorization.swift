@@ -28,7 +28,11 @@ public final class Authorization {
         }
     #endif
     
-    public func requestPasswordGrantAuthorization(username: String, password: String) -> Single<TokenResponse> {
+    public func requestPasswordGrantAuthorization(
+        username: String,
+        password: String,
+        extraData: [String: String] = [:]
+    ) -> Single<TokenResponse> {
         return Single<TokenResponse>.create { emitter -> Disposable in
             self.apiService.requestToken(
                 grantType: .password,
@@ -37,6 +41,7 @@ public final class Authorization {
                 username: username,
                 password: password,
                 refreshToken: nil,
+                extraData: extraData,
                 success: { emitter(.success($0)) },
                 failure: { emitter(.error($0)) }
             )
@@ -44,7 +49,10 @@ public final class Authorization {
         }
     }
     
-    public func refreshAccessToken(refreshToken: String) -> Single<TokenResponse> {
+    public func refreshAccessToken(
+        refreshToken: String,
+        extraData: [String: String] = [:]
+    ) -> Single<TokenResponse> {
         return Single<TokenResponse>.create { emitter -> Disposable in
             self.apiService.requestToken(
                 grantType: .refresh,
@@ -53,6 +61,7 @@ public final class Authorization {
                 username: nil,
                 password: nil,
                 refreshToken: refreshToken,
+                extraData: extraData,
                 success: { emitter(.success($0)) },
                 failure: { emitter(.error($0)) }
             )
