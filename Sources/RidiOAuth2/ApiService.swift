@@ -72,7 +72,7 @@ final class ApiService {
                         error: error,
                         statusCode: statusCode,
                         errorCode: value["error"] as? String,
-                        errorDescription: value["error_description"] as? String
+                        errorDescription: value["description"] as? String
                     )))
                 }
             } else {

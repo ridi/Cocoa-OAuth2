@@ -78,7 +78,7 @@ final class RidiOAuth2Tests: XCTestCase {
         let response = StubResponse.Builder()
             .stubResponse(withStatusCode: 400)
             .addBody("""
-                {"error":"\(Dummy.errorCode)","error_description":"\(Dummy.errorDescription)"}
+                {"error":"\(Dummy.errorCode)","description":"\(Dummy.errorDescription)"}
                 """.data(using: .utf8)!)
         let request = StubRequest.Builder()
             .stubRequest(withMethod: .POST, urlMatcher: urlMatcher)
