@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.9.1)
+  - JWTDecode (2.2.0)
+  - RidiOAuth2 (1.1.1):
+    - Alamofire (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
+
+DEPENDENCIES:
+  - JWTDecode
+  - RidiOAuth2 (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - JWTDecode
+    - RxSwift
+
+EXTERNAL SOURCES:
+  RidiOAuth2:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  JWTDecode: 85a405ab16d5473e99bd89ded1d535090ebd6a0e
+  RidiOAuth2: c125b5670c3db6054b6f83b4841d4da44a1fcfad
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+
+PODFILE CHECKSUM: f41bb13a8cfdafc0fc52482c32a4045608c0d468
+
+COCOAPODS: 1.9.1
