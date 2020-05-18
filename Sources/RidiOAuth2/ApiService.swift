@@ -51,8 +51,7 @@ final class ApiService {
         password: String? = nil,
         refreshToken: String? = nil,
         extraData: [String: String] = [:],
-        success: @escaping (TokenResponse) -> Void,
-        failure: @escaping (NSError) -> Void
+        completion: @escaping (Swift.Result<TokenResponse, Error>) -> Void
     ) {
         let url = createUrl(path: "oauth2/token")
         var parameters: Parameters = ["grant_type": grantType.rawValue]
@@ -67,17 +66,22 @@ final class ApiService {
             let statusCode = response.response?.statusCode
             if let value = response.result.value as? [String: Any] {
                 if let tokenResponse = TokenResponse(dictionary: value) {
-                    success(tokenResponse)
+                    completion(.success(tokenResponse))
                 } else {
-                    failure(NSError(
+                    completion(.failure(NSError(
                         error: error,
                         statusCode: statusCode,
                         errorCode: value["error"] as? String,
                         errorDescription: value["error_description"] as? String
-                    ))
+                    )))
                 }
             } else {
-                failure(NSError(error: error, statusCode: statusCode, errorCode: nil, errorDescription: nil))
+                completion(.failure(NSError(
+                    error: error,
+                    statusCode: statusCode,
+                    errorCode: nil,
+                    errorDescription: nil
+                )))
             }
         })
     }

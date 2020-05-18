@@ -42,8 +42,14 @@ public final class Authorization {
                 password: password,
                 refreshToken: nil,
                 extraData: extraData,
-                success: { emitter(.success($0)) },
-                failure: { emitter(.error($0)) }
+                completion: { result in
+                    switch result {
+                    case let .success(response):
+                        emitter(.success(response))
+                    case let .failure(error):
+                        emitter(.error(error))
+                    }
+                }
             )
             return Disposables.create()
         }
@@ -62,8 +68,14 @@ public final class Authorization {
                 password: nil,
                 refreshToken: refreshToken,
                 extraData: extraData,
-                success: { emitter(.success($0)) },
-                failure: { emitter(.error($0)) }
+                completion: { result in
+                    switch result {
+                    case let .success(response):
+                        emitter(.success(response))
+                    case let .failure(error):
+                        emitter(.error(error))
+                    }
+                }
             )
             return Disposables.create()
         }
