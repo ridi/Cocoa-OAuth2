@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * None.
 
+## [1.1.2 (2020-05-19)]
+
+### Added
+
+* Add extraData parameter.
+
 ## [1.1.1 (2020-04-13)]
 
 ### Added
@@ -25,6 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * First release.
 
-[Unreleased]: https://github.com/ridi/cocoa-oauth2/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/ridi/cocoa-oauth2/compare/1.1.2...HEAD
+[1.1.2 (2020-05-19)]: https://github.com/ridi/cocoa-oauth2/compare/1.1.1...1.1.2
+[1.1.1 (2020-04-13)]: https://github.com/ridi/cocoa-oauth2/compare/1.1.0...1.1.1
 [1.1.0 (2019-03-13)]: https://github.com/ridi/cocoa-oauth2/compare/1.0.0...1.1.0
 [1.0.0 (2019-02-26)]: https://github.com/ridi/cocoa-oauth2/compare/6a038b7...1.0.0

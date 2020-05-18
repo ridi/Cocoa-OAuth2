@@ -10,7 +10,7 @@
 ## Requirements
 
 - Xcode 11.1+
-- Swift 4.2
+- Swift 5.0+
 - iOS 9+
 - macOS 10.13+
 
