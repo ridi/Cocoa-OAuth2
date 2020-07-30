@@ -1,22 +1,29 @@
 import Foundation
 
-public let AuthorizationErrorDomain = "Authorization.Error.Domain"
-public struct AuthorizationErrorKey {
-    public static let error = "error"
-    public static let statusCode = "statusCode"
-    public static let errorCode = "errorCode"
-    public static let errorDescription = "errorDescription"
+public struct AuthorizationError: Swift.Error {
+    var underlyingError: Swift.Error?
+    var statusCode: Int?
+    var authorizationErrorCode: String?
+    var authorizationErrorDescription: String?
 }
 
-extension NSError {
-    convenience init(error: NSError?, statusCode: Int?, errorCode: String?, errorDescription: String?) {
-        var userInfo: [String: Any] = [
-            AuthorizationErrorKey.error: error ?? "nil",
-            AuthorizationErrorKey.statusCode: statusCode ?? "nil",
-            AuthorizationErrorKey.errorCode: errorCode ?? "nil",
-            AuthorizationErrorKey.errorDescription: errorDescription ?? "nil"
-        ]
-        userInfo[NSLocalizedDescriptionKey] = "\(AuthorizationErrorDomain) error: \(userInfo)"
-        self.init(domain: AuthorizationErrorDomain, code: 0, userInfo: userInfo)
+extension AuthorizationError: CustomNSError {
+    public struct ErrorUserInfoKey {
+        public static let statusCode = "statusCode"
+        public static let authorizationErrorCode = "errorCode"
+        public static let authorizationErrorDescription = "errorDescription"
+    }
+
+    public static var errorDomain: String { "\(String(reflecting: self)).Domain" }
+    public var errorCode: Int { 0 }
+    public var errorUserInfo: [String: Any] {
+        var errorUserInfo = [String: Any]()
+
+        underlyingError.flatMap { errorUserInfo[NSUnderlyingErrorKey] = $0 }
+        statusCode.flatMap { errorUserInfo[ErrorUserInfoKey.statusCode] = $0 }
+        authorizationErrorCode.flatMap { errorUserInfo[ErrorUserInfoKey.authorizationErrorCode] = $0 }
+        authorizationErrorDescription.flatMap { errorUserInfo[ErrorUserInfoKey.authorizationErrorDescription] = $0 }
+
+        return errorUserInfo
     }
 }
