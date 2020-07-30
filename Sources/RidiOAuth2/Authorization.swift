@@ -40,26 +40,7 @@ public final class Authorization {
     ) -> Single<TokenResponse> {
         session.rx.request(request: TokenRequest(grantType: .password, clientID: self.clientId, clientSecret: self.clientSecret, username: username, password: password, refreshToken: nil, extraData: extraData, baseURL: baseURL))
             .map {
-                switch $0.result {
-                case .success(let _token):
-                    guard let token = _token.token else {
-                        throw AuthorizationError(
-                            underlyingError: nil,
-                            statusCode: $0.response?.statusCode,
-                            authorizationErrorCode: try? $0.result.get().errorCode,
-                            authorizationErrorDescription: try? $0.result.get().errorDescription
-                        )
-                    }
-
-                    return token
-                case .failure(let error):
-                    throw AuthorizationError(
-                        underlyingError: error,
-                        statusCode: $0.response?.statusCode,
-                        authorizationErrorCode: try? $0.result.get().errorCode,
-                        authorizationErrorDescription: try? $0.result.get().errorDescription
-                    )
-                }
+                try self._processResponse($0)
             }
     }
     
@@ -69,26 +50,30 @@ public final class Authorization {
     ) -> Single<TokenResponse> {
         session.rx.request(request: TokenRequest(grantType: .refresh, clientID: self.clientId, clientSecret: self.clientSecret, username: nil, password: nil, refreshToken: refreshToken, extraData: extraData, baseURL: baseURL))
             .map {
-                switch $0.result {
-                case .success(let _token):
-                    guard let token = _token.token else {
-                        throw AuthorizationError(
-                            underlyingError: nil,
-                            statusCode: $0.response?.statusCode,
-                            authorizationErrorCode: try? $0.result.get().errorCode,
-                            authorizationErrorDescription: try? $0.result.get().errorDescription
-                        )
-                    }
-
-                    return token
-                case .failure(let error):
-                    throw AuthorizationError(
-                        underlyingError: error,
-                        statusCode: $0.response?.statusCode,
-                        authorizationErrorCode: try? $0.result.get().errorCode,
-                        authorizationErrorDescription: try? $0.result.get().errorDescription
-                    )
-                }
+                try self._processResponse($0)
             }
+    }
+
+    private func _processResponse(_ response: Response<_TokenResponse, Swift.Error>) throws -> TokenResponse {
+        switch response.result {
+        case .success(let _token):
+            guard let token = _token.token else {
+                throw AuthorizationError(
+                    underlyingError: nil,
+                    statusCode: response.response?.statusCode,
+                    authorizationErrorCode: try? response.result.get().errorCode,
+                    authorizationErrorDescription: try? response.result.get().errorDescription
+                )
+            }
+
+            return token
+        case .failure(let error):
+            throw AuthorizationError(
+                underlyingError: error,
+                statusCode: response.response?.statusCode,
+                authorizationErrorCode: try? response.result.get().errorCode,
+                authorizationErrorDescription: try? response.result.get().errorDescription
+            )
+        }
     }
 }
