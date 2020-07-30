@@ -38,7 +38,18 @@ public final class Authorization {
         password: String,
         extraData: [String: String] = [:]
     ) -> Single<TokenResponse> {
-        session.rx.request(request: TokenRequest(grantType: .password, clientID: self.clientId, clientSecret: self.clientSecret, username: username, password: password, refreshToken: nil, extraData: extraData, baseURL: baseURL))
+        session.rx.request(
+                request: TokenRequest(
+                    grantType: .password,
+                    clientID: clientId,
+                    clientSecret: clientSecret,
+                    username: username,
+                    password: password,
+                    refreshToken: nil,
+                    extraData: extraData,
+                    baseURL: baseURL
+                )
+            )
             .map {
                 try self._processResponse($0)
             }
@@ -48,7 +59,18 @@ public final class Authorization {
         refreshToken: String,
         extraData: [String: String] = [:]
     ) -> Single<TokenResponse> {
-        session.rx.request(request: TokenRequest(grantType: .refresh, clientID: self.clientId, clientSecret: self.clientSecret, username: nil, password: nil, refreshToken: refreshToken, extraData: extraData, baseURL: baseURL))
+        session.rx.request(
+                request: TokenRequest(
+                    grantType: .refresh,
+                    clientID: clientId,
+                    clientSecret: clientSecret,
+                    username: nil,
+                    password: nil,
+                    refreshToken: refreshToken,
+                    extraData: extraData,
+                    baseURL: baseURL
+                )
+            )
             .map {
                 try self._processResponse($0)
             }
