@@ -29,18 +29,10 @@ struct _TokenResponse: Decodable {
     public let token: TokenResponse?
 
     init(from decoder: Decoder) throws {
-        guard let token = try? TokenResponse(from: decoder) else {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
 
-            errorCode = try container.decodeIfPresent(String.self, forKey: .errorCode)
-            errorDescription = try container.decodeIfPresent(String.self, forKey: .errorDescription)
-            self.token = nil
-
-            return
-        }
-
-        self.errorCode = nil
-        self.errorDescription = nil
-        self.token = token
+        errorCode = try container.decodeIfPresent(String.self, forKey: .errorCode)
+        errorDescription = try container.decodeIfPresent(String.self, forKey: .errorDescription)
+        token = try? TokenResponse(from: decoder)
     }
 }
