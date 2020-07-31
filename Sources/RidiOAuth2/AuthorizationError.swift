@@ -3,15 +3,15 @@ import Foundation
 public struct AuthorizationError: Swift.Error {
     var underlyingError: Swift.Error?
     var statusCode: Int?
-    var authorizationErrorCode: String?
-    var authorizationErrorDescription: String?
+    var apiErrorCode: String?
+    var apiErrorDescription: String?
 }
 
 extension AuthorizationError: CustomNSError {
     public struct ErrorUserInfoKey {
         public static let statusCode = "statusCode"
-        public static let authorizationErrorCode = "errorCode"
-        public static let authorizationErrorDescription = "errorDescription"
+        public static let apiErrorCode = "errorCode"
+        public static let apiErrorDescription = "errorDescription"
     }
 
     public static var errorDomain: String { "\(String(reflecting: self)).Domain" }
@@ -21,8 +21,8 @@ extension AuthorizationError: CustomNSError {
 
         underlyingError.flatMap { errorUserInfo[NSUnderlyingErrorKey] = $0 }
         statusCode.flatMap { errorUserInfo[ErrorUserInfoKey.statusCode] = $0 }
-        authorizationErrorCode.flatMap { errorUserInfo[ErrorUserInfoKey.authorizationErrorCode] = $0 }
-        authorizationErrorDescription.flatMap { errorUserInfo[ErrorUserInfoKey.authorizationErrorDescription] = $0 }
+        apiErrorCode.flatMap { errorUserInfo[ErrorUserInfoKey.apiErrorCode] = $0 }
+        apiErrorDescription.flatMap { errorUserInfo[ErrorUserInfoKey.apiErrorDescription] = $0 }
 
         return errorUserInfo
     }

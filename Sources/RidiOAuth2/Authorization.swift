@@ -69,8 +69,8 @@ public final class Authorization {
                 throw AuthorizationError(
                     underlyingError: nil,
                     statusCode: response.response?.statusCode,
-                    authorizationErrorCode: try? response.result.get().errorCode,
-                    authorizationErrorDescription: try? response.result.get().errorDescription
+                    apiErrorCode: try? response.result.get().errorCode,
+                    apiErrorDescription: try? response.result.get().errorDescription
                 )
             }
 
@@ -79,8 +79,8 @@ public final class Authorization {
             throw AuthorizationError(
                 underlyingError: error,
                 statusCode: response.response?.statusCode,
-                authorizationErrorCode: try? response.result.get().errorCode,
-                authorizationErrorDescription: try? response.result.get().errorDescription
+                apiErrorCode: try? response.result.get().errorCode,
+                apiErrorDescription: try? response.result.get().errorDescription
             )
         }
     }

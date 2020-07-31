@@ -96,8 +96,8 @@ final class RidiOAuth2Tests: XCTestCase {
                 if case let .error(error) = event {
                     let userInfo = (error as NSError).userInfo
                     XCTAssertEqual(userInfo[AuthorizationError.ErrorUserInfoKey.statusCode] as? Int, 400)
-                    XCTAssertEqual(userInfo[AuthorizationError.ErrorUserInfoKey.authorizationErrorCode] as? String, Dummy.errorCode)
-                    XCTAssertEqual(userInfo[AuthorizationError.ErrorUserInfoKey.authorizationErrorDescription] as? String, Dummy.errorDescription)
+                    XCTAssertEqual(userInfo[AuthorizationError.ErrorUserInfoKey.apiErrorCode] as? String, Dummy.errorCode)
+                    XCTAssertEqual(userInfo[AuthorizationError.ErrorUserInfoKey.apiErrorDescription] as? String, Dummy.errorDescription)
                     expt.fulfill()
                 } else {
                     XCTFail()
