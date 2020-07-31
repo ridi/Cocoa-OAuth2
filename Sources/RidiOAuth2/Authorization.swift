@@ -20,7 +20,7 @@ public final class Authorization {
         self.clientSecret = clientSecret
         host = devMode ? Host.dev : Host.real
         baseURL = URL(string: "https://account.\(host)/")!
-        session = Session()
+        session = Session(baseURL: baseURL)
     }
     
     #if TEST
@@ -29,7 +29,7 @@ public final class Authorization {
             self.clientSecret = clientSecret
             host = devMode ? Host.dev : Host.real
             baseURL = URL(string: "https://account.\(host)/")!
-            session = Session()
+            session = Session(baseURL: baseURL)
         }
     #endif
 
@@ -46,8 +46,7 @@ public final class Authorization {
                     username: username,
                     password: password,
                     refreshToken: nil,
-                    extraData: extraData,
-                    baseURL: baseURL
+                    extraData: extraData
                 )
             )
             .map {
@@ -67,8 +66,7 @@ public final class Authorization {
                     username: nil,
                     password: nil,
                     refreshToken: refreshToken,
-                    extraData: extraData,
-                    baseURL: baseURL
+                    extraData: extraData
                 )
             )
             .map {

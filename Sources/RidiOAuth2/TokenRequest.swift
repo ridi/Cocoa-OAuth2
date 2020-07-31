@@ -27,9 +27,7 @@ struct TokenRequest: Encodable, Requestable {
     var refreshToken: String?
     var extraData: Encodable?
 
-    var baseURL: URL
-
-    var url: URL { URL(string: "oauth2/token", relativeTo: baseURL)! }
+    var url: URL { URL(string: "oauth2/token")! }
     var httpMethod: URLRequest.HTTPMethod { .post }
 
     func encode(to encoder: Encoder) throws {
