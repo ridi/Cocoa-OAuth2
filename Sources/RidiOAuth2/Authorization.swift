@@ -12,26 +12,14 @@ public final class Authorization {
     private let clientId: String
     private let clientSecret: String
     private let host: String
-    private let baseURL: URL
     private let session: Session
     
     public init(clientId: String, clientSecret: String, devMode: Bool = false) {
         self.clientId = clientId
         self.clientSecret = clientSecret
         host = devMode ? Host.dev : Host.real
-        baseURL = URL(string: "https://account.\(host)/")!
-        session = Session(baseURL: baseURL)
+        session = Session(baseURL: URL(string: "https://account.\(host)/"))
     }
-    
-    #if TEST
-        public init(clientId: String, clientSecret: String, devMode: Bool = false, protocolClasses: [AnyClass]? = nil) {
-            self.clientId = clientId
-            self.clientSecret = clientSecret
-            host = devMode ? Host.dev : Host.real
-            baseURL = URL(string: "https://account.\(host)/")!
-            session = Session(baseURL: baseURL)
-        }
-    #endif
 
     public func requestPasswordGrantAuthorization(
         username: String,
