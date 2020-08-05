@@ -27,7 +27,7 @@ public final class Authorization {
         extraData: [String: String] = [:]
     ) -> Single<TokenResponse> {
         session.rx.request(
-                request: TokenRequest(
+                TokenRequest(
                     grantType: .password,
                     clientID: clientId,
                     clientSecret: clientSecret,
@@ -47,7 +47,7 @@ public final class Authorization {
         extraData: [String: String] = [:]
     ) -> Single<TokenResponse> {
         session.rx.request(
-                request: TokenRequest(
+                TokenRequest(
                     grantType: .refresh,
                     clientID: clientId,
                     clientSecret: clientSecret,
