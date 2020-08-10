@@ -1,10 +1,10 @@
 import Foundation
 
 public struct AuthorizationError: Swift.Error {
-    var underlyingError: Swift.Error?
-    var statusCode: Int?
-    var apiErrorCode: String?
-    var apiErrorDescription: String?
+    public let underlyingError: Swift.Error?
+    public let statusCode: Int?
+    public let apiErrorCode: String?
+    public let apiErrorDescription: String?
 }
 
 extension AuthorizationError: CustomNSError {

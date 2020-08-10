@@ -6,7 +6,7 @@ enum GrantType: String, Encodable {
     case refresh  = "refresh_token"
 }
 
-struct TokenRequest: Encodable, Requestable {
+struct TokenRequest: Requestable, Encodable {
     typealias ResponseBody = _TokenResponse
     typealias Parameters = Self
 
