@@ -32,9 +32,9 @@
         "package": "URLKit",
         "repositoryURL": "https://github.com/ridi/URLKit.swift.git",
         "state": {
-          "branch": "release/0.1.0",
-          "revision": "4590bd755a5d167d1d4da93ecb8e90d2a4269a1e",
-          "version": null
+          "branch": null,
+          "revision": "98674a21db7f23e9c294ff87a42b9d7954a0b87d",
+          "version": "0.1.0"
         }
       }
     ]
