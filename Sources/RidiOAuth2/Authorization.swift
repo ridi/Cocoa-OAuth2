@@ -26,62 +26,69 @@ public final class Authorization {
         password: String,
         extraData: [String: String] = [:]
     ) -> Single<TokenResponse> {
-        session.rx.request(
-                TokenRequest(
-                    grantType: .password,
-                    clientID: clientId,
-                    clientSecret: clientSecret,
-                    username: username,
-                    password: password,
-                    refreshToken: nil,
-                    extraData: extraData
-                )
+        request(
+            TokenRequest(
+                grantType: .password,
+                clientID: clientId,
+                clientSecret: clientSecret,
+                username: username,
+                password: password,
+                refreshToken: nil,
+                extraData: extraData
             )
-            .map {
-                try self._processResponse($0)
-            }
+        )
     }
     
     public func refreshAccessToken(
         refreshToken: String,
         extraData: [String: String] = [:]
     ) -> Single<TokenResponse> {
-        session.rx.request(
-                TokenRequest(
-                    grantType: .refresh,
-                    clientID: clientId,
-                    clientSecret: clientSecret,
-                    username: nil,
-                    password: nil,
-                    refreshToken: refreshToken,
-                    extraData: extraData
-                )
+        request(
+            TokenRequest(
+                grantType: .refresh,
+                clientID: clientId,
+                clientSecret: clientSecret,
+                username: nil,
+                password: nil,
+                refreshToken: refreshToken,
+                extraData: extraData
             )
-            .map {
-                try self._processResponse($0)
-            }
+        )
     }
 
-    private func _processResponse(_ response: Response<_TokenResponse, Swift.Error>) throws -> TokenResponse {
-        switch response.result {
-        case .success(let _token):
-            guard let token = _token.token else {
-                throw AuthorizationError(
-                    underlyingError: nil,
-                    statusCode: response.response?.statusCode,
-                    apiErrorCode: try? response.result.get().errorCode,
-                    apiErrorDescription: try? response.result.get().errorDescription
-                )
+    private func request(_ request: TokenRequest) -> Single<TokenResponse> {
+        .create { single -> Disposable in
+            let request = self.session.request(request) { response in
+                switch response.result {
+                case .success(let _token):
+                    guard let token = _token.token else {
+                        single(.error(
+                            AuthorizationError(
+                                underlyingError: nil,
+                                statusCode: response.response?.statusCode,
+                                apiErrorCode: try? response.result.get().errorCode,
+                                apiErrorDescription: try? response.result.get().errorDescription
+                            )
+                        ))
+                        return
+                    }
+
+                    single(.success(token))
+                case .failure(let error):
+                    single(.error(
+                        AuthorizationError(
+                            underlyingError: error,
+                            statusCode: response.response?.statusCode,
+                            apiErrorCode: try? response.result.get().errorCode,
+                            apiErrorDescription: try? response.result.get().errorDescription
+                        )
+                    ))
+                }
             }
 
-            return token
-        case .failure(let error):
-            throw AuthorizationError(
-                underlyingError: error,
-                statusCode: response.response?.statusCode,
-                apiErrorCode: try? response.result.get().errorCode,
-                apiErrorDescription: try? response.result.get().errorDescription
-            )
+            return Disposables.create {
+                request.cancel()
+            }
         }
     }
 }
