@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * None.
 
+## [1.3.1 (2020-08-11)]
+
+### Changed
+
+* Update URLKit to 0.2.0.
+
 ## [1.3.0 (2020-08-11)]
 
 ### Changed
@@ -44,8 +50,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * First release.
 
-[Unreleased]: https://github.com/ridi/cocoa-oauth2/compare/1.3.0...HEAD
-[1.2.0 (2020-06-24)]: https://github.com/ridi/cocoa-oauth2/compare/1.2.0...1.3.0
+[Unreleased]: https://github.com/ridi/cocoa-oauth2/compare/1.3.1...HEAD
+[1.3.1 (2020-08-11)]: https://github.com/ridi/cocoa-oauth2/compare/1.3.0...1.3.1
+[1.3.0 (2020-08-11)]: https://github.com/ridi/cocoa-oauth2/compare/1.2.0...1.3.0
 [1.2.0 (2020-06-24)]: https://github.com/ridi/cocoa-oauth2/compare/1.1.2...1.2.0
 [1.1.2 (2020-05-19)]: https://github.com/ridi/cocoa-oauth2/compare/1.1.1...1.1.2
 [1.1.1 (2020-04-13)]: https://github.com/ridi/cocoa-oauth2/compare/1.1.0...1.1.1
