@@ -62,7 +62,7 @@ public final class Authorization {
                 switch response.result {
                 case .success(let _token):
                     guard let token = _token.token else {
-                        single(.error(
+                        single(.failure(
                             AuthorizationError(
                                 underlyingError: nil,
                                 statusCode: response.response?.statusCode,
@@ -75,7 +75,7 @@ public final class Authorization {
 
                     single(.success(token))
                 case .failure(let error):
-                    single(.error(
+                    single(.failure(
                         AuthorizationError(
                             underlyingError: error,
                             statusCode: response.response?.statusCode,
