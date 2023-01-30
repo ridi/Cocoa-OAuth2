@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * None.
 
+## [1.4.0 (2023-01-31)]
+
+### Changed
+
+* Update URLKit-Swift to 0.2.5. (with renamed URLKit.swift to URL-Swift.)
+
 ## [1.3.2 (2021-04-28)]
 
 ### Changed
@@ -56,7 +62,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 * First release.
 
-[Unreleased]: https://github.com/ridi/cocoa-oauth2/compare/1.3.1...HEAD
+[Unreleased]: https://github.com/ridi/cocoa-oauth2/compare/1.4.0...HEAD
+[1.4.0 (2023-01-31)]: https://github.com/ridi/cocoa-oauth2/compare/1.3.2...1.4.0
 [1.3.2 (2021-04-28)]: https://github.com/ridi/cocoa-oauth2/compare/1.3.1...1.3.2
 [1.3.1 (2020-08-11)]: https://github.com/ridi/cocoa-oauth2/compare/1.3.0...1.3.1
 [1.3.0 (2020-08-11)]: https://github.com/ridi/cocoa-oauth2/compare/1.2.0...1.3.0
