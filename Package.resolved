@@ -30,7 +30,7 @@
       },
       {
         "package": "URLKit",
-        "repositoryURL": "https://github.com/ridi/URLKit.swift.git",
+        "repositoryURL": "https://github.com/ridi/URLKit-Swift.git",
         "state": {
           "branch": null,
           "revision": "8b94a654c29f437b9ec819c39d345d438a8035e8",
